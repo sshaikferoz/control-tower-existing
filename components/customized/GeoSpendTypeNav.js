@@ -7,6 +7,9 @@ import {
   getCountryCodeByCountryName,
 } from '../../lib/helpers/getQueryCountryName'
 import { maskContext } from '../../lib/maskContext'
+import Dialog from '../common/Dialog'
+import Block from '../common/Block'
+import PredictionLineChart from './PredictionLineChart'
 
 const delayGen = () => {
   let timer = 0
@@ -21,12 +24,154 @@ const delayGen = () => {
 }
 const pointGenerationDelay = delayGen()
 
+// AI Icon with Star
+const AIIcon = ({ className }) => (
+  <svg
+    className={className}
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* AI Neural Network */}
+    <path
+      d="M12 2L2 7L12 12L22 7L12 2Z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M2 17L12 22L22 17"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M2 12L12 17L22 12"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <circle cx="12" cy="12" r="2" fill="currentColor" />
+    {/* Star Icon */}
+    <path
+      d="M18 3L19.09 6.26L22 7L19.09 7.74L18 11L16.91 7.74L14 7L16.91 6.26L18 3Z"
+      fill="currentColor"
+      opacity="0.9"
+    />
+  </svg>
+)
+
+// Popup Template for Prediction Dialog
+const PopupTemplate = ({ title, children }) => {
+  const blockRef = useRef(null)
+  
+  useEffect(() => {
+    if (blockRef.current) {
+      const titleElement = blockRef.current.querySelector('.popupTitle')
+      if (titleElement) {
+        titleElement.style.color = '#ffffff'
+      }
+    }
+  }, [title])
+  
+  return (
+    <div ref={blockRef}>
+      <Block
+        style={{
+          boxShadow: 'unset',
+          background: 'var(--block-bg)',
+          backgroundColor: 'rgba(21, 57, 122, 0.95)',
+          padding: 'var(--space-lg)',
+          minHeight: '100%',
+        }}
+        popup={true}
+        title={title}
+        transparent={true}
+      >
+        <div style={{ marginBlockEnd: '1em', display: 'grid' }}>{children}</div>
+      </Block>
+    </div>
+  )
+}
+
+// Spend Prediction Dialog Component
+const SpendPredictionDialog = ({ isOpen, onClose, technicalName, title, buttonPosition }) => {
+  const dialogRef = useRef(null)
+  const contentRef = useRef(null)
+  const [dialogContentVisible, setDialogContentVisible] = useState(false)
+  const [shouldShowDialog, setShouldShowDialog] = useState(false)
+
+  useEffect(() => {
+    if (isOpen) {
+      // First set content visibility
+      setDialogContentVisible(true)
+      // Wait for content to be rendered in DOM before showing dialog
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          // Check if content is actually in the DOM
+          if (contentRef.current || dialogRef.current?.querySelector('.popupTitle')) {
+            setShouldShowDialog(true)
+          } else {
+            // Fallback: show after brief delay if content check fails
+            setTimeout(() => setShouldShowDialog(true), 100)
+          }
+        })
+      })
+    } else {
+      // Hide dialog first, then content
+      setShouldShowDialog(false)
+      setTimeout(() => {
+        setDialogContentVisible(false)
+      }, 200)
+    }
+  }, [isOpen])
+
+  return (
+    <Dialog
+      ref={dialogRef}
+      size="35em"
+      radius="14px"
+      modalState={shouldShowDialog ? 'show' : 'close'}
+      clientX={buttonPosition?.x}
+      clientY={buttonPosition?.y}
+      onModalClose={async () => {
+        setShouldShowDialog(false)
+        setDialogContentVisible(false)
+        await new Promise((r) => setTimeout(r, 400))
+        onClose()
+      }}
+    >
+      {dialogContentVisible && technicalName && (
+        <div ref={contentRef}>
+          <PopupTemplate title={title || 'AI Prediction'}>
+            <PredictionLineChart
+              TechnicalName={technicalName}
+              key={`${technicalName}-${isOpen}`}
+            />
+          </PopupTemplate>
+        </div>
+      )}
+    </Dialog>
+  )
+}
+
 export default function GeoSpendTypeNav(props) {
   const { withMask, maskData } = useContext(maskContext)
   const [
     serviceSpendDialog,
     setServiceSpendDialog,
   ] = useState(false)
+  const [totalSpendPredictionDialog, setTotalSpendPredictionDialog] = useState(false)
+  const [contractSpendPredictionDialog, setContractSpendPredictionDialog] = useState(false)
+  const [materialSpendPredictionDialog, setMaterialSpendPredictionDialog] = useState(false)
+  const [totalSpendButtonPosition, setTotalSpendButtonPosition] = useState(null)
+  const [contractSpendButtonPosition, setContractSpendButtonPosition] = useState(null)
+  const [materialSpendButtonPosition, setMaterialSpendButtonPosition] = useState(null)
   const { query = {}, spendMapArea = 'global',spendType='directSpend' } = props
 
   const totalSpendQueries = Object.keys(query)
@@ -104,16 +249,64 @@ export default function GeoSpendTypeNav(props) {
 
   return (
     <div className={styles.container}>
+      <SpendPredictionDialog
+        isOpen={totalSpendPredictionDialog}
+        onClose={() => {
+          setTotalSpendPredictionDialog(false)
+          setTotalSpendButtonPosition(null)
+        }}
+        technicalName="YSCM_ALL_SPEND_PRED_01"
+        title="Total Spend Prediction"
+        buttonPosition={totalSpendButtonPosition}
+      />
+      <SpendPredictionDialog
+        isOpen={contractSpendPredictionDialog}
+        onClose={() => {
+          setContractSpendPredictionDialog(false)
+          setContractSpendButtonPosition(null)
+        }}
+        technicalName="YSCM_SRV_SPEND_PRED_01"
+        title="Contracts Spend Prediction"
+        buttonPosition={contractSpendButtonPosition}
+      />
+      <SpendPredictionDialog
+        isOpen={materialSpendPredictionDialog}
+        onClose={() => {
+          setMaterialSpendPredictionDialog(false)
+          setMaterialSpendButtonPosition(null)
+        }}
+        technicalName="YSCM_MAT_SPEND_PRED_01"
+        title="Material Spend Prediction"
+        buttonPosition={materialSpendButtonPosition}
+      />
       <div className={styles.wrap}>
         <section
           onClick={() => props.onSpendTypeChange('totalSpend')}
           className={styles.totalSpend}
         >
           <h1
-            style={{ lineHeight: '1.2', paddingBlockStart: '1em' }}
+            style={{ lineHeight: '1.2', paddingBlockStart: '1em', display: 'flex', alignItems: 'center', gap: '0.5em' }}
             className={styles.spendTitle}
           >
             Total Spend <span> (Last 12 Months)</span>
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                const rect = e.currentTarget.getBoundingClientRect()
+                setTotalSpendButtonPosition({
+                  x: rect.right,
+                  y: rect.top + rect.height / 2
+                })
+                setTotalSpendPredictionDialog(true)
+              }}
+              className={styles.predictionButton}
+              title="AI Prediction"
+            >
+              <img
+                src={`${process.env.NEXT_PUBLIC_BSP_NAME}/images/ai-prediction.png`}
+                alt="AI prediction"
+              />
+            </button>
           </h1>
           <h1>${!isNaN(totalSpend) && withMask(formatNumber(totalSpend, 0))}</h1>
         </section>
@@ -132,7 +325,27 @@ export default function GeoSpendTypeNav(props) {
                 alt="bar-chart"
               />
             </div>
-            <h1 className={styles.title}>Contracts Spend</h1>
+            <h1 className={styles.title} style={{ display: 'flex', alignItems: 'center', gap: '0.5em' }}>
+              Contracts Spend
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  const rect = e.currentTarget.getBoundingClientRect()
+                  setContractSpendButtonPosition({
+                    x: rect.right,
+                    y: rect.top + rect.height / 2
+                  })
+                  setContractSpendPredictionDialog(true)
+                }}
+                className={styles.predictionButton}
+                title="AI Prediction"
+              >
+                <img
+                  src={`${process.env.NEXT_PUBLIC_BSP_NAME}/images/ai-prediction.png`}
+                  alt="AI prediction"
+                />
+              </button>
+            </h1>
             <h3>{'$' + withMask(formatNumber(totalServiceSpend))}</h3>
             <h4 style={{ opacity: 0.6, lineHeight: 1.2, width: 'max-content' }}>
               {Math.round(serviceSpendPercentage) + '%'}
@@ -157,7 +370,27 @@ export default function GeoSpendTypeNav(props) {
               alt="bar-chart"
             />
           </div>
-          <h1 className={styles.title}>Material Spend</h1>
+          <h1 className={styles.title} style={{ display: 'flex', alignItems: 'center', gap: '0.5em' }}>
+            Material Spend
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                const rect = e.currentTarget.getBoundingClientRect()
+                setMaterialSpendButtonPosition({
+                  x: rect.right,
+                  y: rect.top + rect.height / 2
+                })
+                setMaterialSpendPredictionDialog(true)
+              }}
+              className={styles.predictionButton}
+              title="AI Prediction"
+            >
+              <img
+                src={`${process.env.NEXT_PUBLIC_BSP_NAME}/images/ai-prediction.png`}
+                alt="AI prediction"
+              />
+            </button>
+          </h1>
           <h3>{'$' + withMask(formatNumber(totalMaterialSpend))}</h3>
           <h4 style={{ opacity: 0.6, lineHeight: 1.2, width: 'max-content' }}>
             {Math.round(materialSpendPercentage) + '%'}

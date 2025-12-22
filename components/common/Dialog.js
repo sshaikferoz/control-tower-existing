@@ -38,19 +38,47 @@ const Dialog = React.forwardRef((props, ref) => {
   if (defaultPosition && dialog) {
     let { clientX, clientY } = props
     console.log({ clientX, clientY })
-    if (!isNaN(clientX))
+    if (!isNaN(clientX)) {
       CSSVariableClientXY = {
         '--size-x': `${clientX}px`,
         '--size-y': `${clientY}px`,
       }
+    }
     else centerCssClas = styles.defaultCenter
   }
   useEffect(() => {
     if (props?.modalState === 'show' && !isOpen) {
       if (defaultPosition && dialog) {
+        // Set initial positioning before showing dialog
+        if (!isNaN(props.clientX) && !isNaN(props.clientY)) {
+          dialog.style.setProperty('--translate-y', '-50%')
+        }
+        
+        // Show dialog
         dialog?.showModal?.()
-        // dialog.style.left = `${parseInt(window.innerWidth) / 2 + offsetLeft}px`
-        // dialog.style.top = `${parseInt(window.innerHeight) / 2 + offsetTop}px`
+        
+        // Adjust positioning if dialog is cut off at the top
+        if (!isNaN(props.clientX) && !isNaN(props.clientY)) {
+          // Wait for dialog to render to get actual height
+          requestAnimationFrame(() => {
+            const dialogRect = dialog.getBoundingClientRect()
+            const dialogHeight = dialogRect.height
+            const minTopSpace = 25
+            const halfDialogHeight = dialogHeight / 2
+            
+            // Current top position after -50% translate would be: clientY - halfDialogHeight
+            const finalTop = props.clientY - halfDialogHeight
+            
+            if (finalTop < minTopSpace) {
+              // Adjust translate so final top is at minTopSpace
+              // We want: clientY + translateY = minTopSpace
+              // So: translateY = minTopSpace - clientY
+              const adjustedTranslate = minTopSpace - props.clientY
+              dialog.style.setProperty('--translate-y', `${adjustedTranslate}px`)
+            }
+          })
+        }
+        
         setIsOpen(true)
         return
       }

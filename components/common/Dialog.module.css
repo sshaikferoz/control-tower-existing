@@ -20,8 +20,8 @@
 .center {
   /* margin: auto; */
   inset-inline-start: clamp(25px, calc(var(--size-x, 0)), calc(100% - 600px));
-  inset-block-start: clamp(480px, calc(var(--size-y, 0)), calc(100% - 25px));
-  translate: 1em calc(-100% - 2em);
+  inset-block-start: clamp(25px, calc(var(--size-y, 0)), calc(100% - 25px));
+  translate: 1em var(--translate-y, -50%);
 }
 .dialog:modal > * {
   opacity: 1;
