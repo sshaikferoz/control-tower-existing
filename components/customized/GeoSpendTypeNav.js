@@ -134,7 +134,7 @@ const SpendPredictionDialog = ({ isOpen, onClose, technicalName, title, buttonPo
   return (
     <Dialog
       ref={dialogRef}
-      size="35em"
+      size="42em"
       radius="14px"
       modalState={shouldShowDialog ? 'show' : 'close'}
       clientX={buttonPosition?.x}
@@ -281,7 +281,14 @@ export default function GeoSpendTypeNav(props) {
       />
       <div className={styles.wrap}>
         <section
-          onClick={() => props.onSpendTypeChange('totalSpend')}
+          onClick={(e) => {
+            // Prevent onClick from firing if prediction dialog is open
+            if (totalSpendPredictionDialog) {
+              e.stopPropagation()
+              return
+            }
+            props.onSpendTypeChange('totalSpend')
+          }}
           className={styles.totalSpend}
         >
           <h1
