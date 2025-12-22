@@ -1,0 +1,79 @@
+.dialog {
+  border: 0;
+  display: none;
+  outline: none;
+  position: absolute;
+  padding: 0;
+  min-width: var(--dialog-size);
+  aspect-ratio: 2.9/2.2;
+  border-radius: var(--dialog-radius);
+  border: solid 2px #2342;
+  box-shadow: 1px 1px 4px 2px #2347;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+}
+.dialog > * {
+  display: none;
+  opacity: 0;
+  transition: all 0.36s ease-in;
+}
+.center {
+  /* margin: auto; */
+  inset-inline-start: clamp(25px, calc(var(--size-x, 0)), calc(100% - 600px));
+  inset-block-start: clamp(480px, calc(var(--size-y, 0)), calc(100% - 25px));
+  translate: 1em calc(-100% - 2em);
+}
+.dialog:modal > * {
+  opacity: 1;
+  display: grid;
+}
+.dialog:modal {
+  opacity: 1;
+  display: grid;
+}
+
+@starting-style {
+  .dialog:modal > * {
+    opacity: 0;
+  }
+  .dialog:modal {
+    opacity: 0;
+  }
+}
+.dialog::backdrop {
+  opacity: 0;
+}
+
+.dialog[open] {
+  animation: fade-in 250ms ease-in forwards;
+}
+.dialog[closing] {
+  animation: fade-out 250ms ease-in forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.55);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+    transform: scale(0.55);
+  }
+
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.defaultCenter{
+  margin: auto;
+}

@@ -1,0 +1,47 @@
+.container {
+  /* background-image: linear-gradient(var(--bg-top), var(--bg-bottom)); */
+  display: grid;
+  grid-template-rows: 1fr 2.5fr;
+  color: white;
+  position: relative;
+  /* padding: 2em 2em; */
+  position: relative;
+}
+.containerStatic {
+  display: grid;
+}
+.staticImage {
+  display: flex;
+  width: 90%;
+  margin-inline: auto;
+}
+.staticImage img {
+  display: block;
+  max-width: 95%;
+  margin-inline: auto;
+  margin-block: auto;
+}
+
+.legends {
+  display: flex;
+  justify-content: space-around;
+  min-height: 130px;
+}
+.leftLegend {
+  display: flex;
+  justify-self: right;
+  padding-inline: var(--space-xs);
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.rightLegend {
+  display: flex;
+  justify-self: left;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.leftLegend img,
+.rightLegend img {
+  max-width: 100px;
+}

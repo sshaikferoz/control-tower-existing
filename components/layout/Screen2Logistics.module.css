@@ -1,0 +1,24 @@
+.grid {
+  grid-template-columns: 2.1fr 1fr;
+  grid-template-rows: 56vh 1fr;
+  row-gap: 1em;
+}
+
+.map {
+  /* scale: .9; */
+  padding-block-start: 4em;
+  padding-inline-end: 1.5em;
+
+}
+
+.alert {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  align-content: center;
+  grid-row: span 2;
+  max-height: calc(100vh - 121px - 2em);
+}
+.sustainability {
+  display: grid;
+  grid-template-rows: minmax(0, 1.5em) 1fr;
+}

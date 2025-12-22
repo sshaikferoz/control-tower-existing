@@ -1,0 +1,428 @@
+.wrap {
+  display: grid;
+  grid-row: span 1;
+  grid-template-rows: max-content minmax(0, 1fr);
+  place-items: center;
+  container-type: inline-size;
+  position: relative;
+  z-index: 9999;
+  --border-width: 18.7px;
+}
+
+.wrap .title {
+  color: white;
+  font-weight: 500;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 2.2lh;
+  user-select: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.wrap .title img {
+  translate: -100% 0;
+  left: -1em;
+  /* display: block; */
+  position: absolute;
+}
+.gaugeContainer {
+  display: grid;
+  /* place-items: center; */
+  align-self: stretch;
+  justify-self: stretch;
+  position: relative;
+}
+.gaugeContainer > * {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+.content {
+  position: absolute;
+  display: gird;
+  inset: 0;
+}
+.content:has(.barGauge) {
+  display: grid;
+}
+.content > * {
+  transition: all 0.25s;
+}
+
+.content .barGauge {
+  z-index: 2;
+}
+.content .barGauge,
+.content .barGauge svg {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  transition: all 0.25s;
+  transition-delay: 0.2s;
+  display: grid;
+  opacity: 1;
+}
+.gaugeContainer .center {
+  position: absolute;
+  scale: 0.1;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.gaugeContainer .circle {
+  top: 7em;
+  align-self: center;
+  border-radius: 50%;
+  scale: 14;
+  background: radial-gradient(#4f84d94d 0%, #1427a780 100%);
+  aspect-ratio: 1;
+  position: absolute;
+  justify-items: center;
+  align-content: center;
+  transform: matrix(0, -1, 1, 0, 0, 0);
+  background: transparent
+    radial-gradient(closest-side at 50% 50%, #4f84d94d 0%, #1427a780 100%) 0% 0%
+    no-repeat padding-box;
+  box-shadow: 0px 10px 10px #00000010;
+}
+.gaugeContainer .center:hover .circle {
+  background: transparent
+    radial-gradient(closest-side at 50% 50%, #4f84d94d 30%, #1427a780 100%) 0% 0%
+    no-repeat padding-box;
+}
+
+.content .circle:hover {
+  background: transparent
+    radial-gradient(closest-side at 50% 50%, #4f84d94d 30%, #1427a780 100%) 0% 0%
+    no-repeat padding-box;
+  cursor: pointer;
+}
+
+.capacityLevel1 {
+  display: none;
+  container-type: inline-size;
+}
+
+.backArrow {
+  display: none;
+  max-width: 45px;
+  vertical-align: -20%;
+  margin-inline-end: 1em;
+}
+@container (min-width: 80em ) {
+  .gaugeContainer .barGauge,
+  .gaugeContainer .circle,
+  .content .barGauge,
+  .content .barGauge > *,
+  .center {
+    display: none;
+    /* align-self: baseline; */
+    opacity: 0;
+  }
+  .capacityLevel1 {
+    display: grid;
+  }
+  .content > * {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+  .content .capacityLevel1 {
+    margin-top: -1em;
+  }
+  .backArrow {
+    display: inline;
+  }
+  .title {
+    cursor: auto;
+  }
+}
+.content .circle a {
+  display: contents;
+}
+
+.circleIcon {
+  display: block;
+  max-width: 60%;
+  opacity: 0.4;
+}
+.barGauge {
+  scale: 0.9;
+  /* display: grid; */
+}
+.barGauge svg {
+  overflow: visible !important;
+}
+.barGauge path {
+  stroke-width: var(--border-width);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #1e4ce8;
+  opacity: 0.9;
+}
+
+.barGauge path:nth-child(2) {
+  stroke: #00810a;
+  stroke-width: var(--stroke1-width, var(--border-width));
+}
+.barGauge path:nth-child(4) {
+  stroke: #65af0b;
+  stroke-width: var(--stroke2-width, var(--border-width));
+}
+
+.barGauge path:nth-child(6) {
+  stroke-width: var(--stroke3-width, var(--border-width));
+  stroke: #85ef8a;
+}
+
+.barGauge path:nth-child(8) {
+  stroke-width: var(--stroke4-width, var(--border-width));
+  stroke: #24e3dc;
+}
+.barGauge path:nth-child(10) {
+  stroke-width: var(--stroke5-width, var(--border-width));
+  stroke: #0093ff;
+}
+
+.barGauge path:nth-child(12) {
+  stroke-width: var(--stroke6-width, var(--border-width));
+  stroke: #1e4ce8;
+}
+.barGauge path:not(:has(+ text)):nth-child(odd) {
+  opacity: 0.8;
+  stroke: #1f2f6d;
+}
+.barGauge path:has(+ text) {
+  opacity: var(--label-opacity, 1);
+  stroke: #e2f3b28f !important;
+  stroke-width: 2px !important;
+}
+
+.barGauge path + text {
+  opacity: var(--label-opacity, 1);
+}
+.svgPathLabel {
+  /* stroke-width: 3px; */
+  /* stroke: red; */
+}
+
+@starting-style {
+  .content > * {
+    opacity: 0;
+  }
+  .content .barGauge svg {
+    /* opacity: 0; */
+  }
+}
+
+.subCommodityPop {
+  width: auto;
+  margin-inline-end: 1em;
+  border: 2px solid var(--accent-blue2);
+  border-radius: 30px;
+  background: linear-gradient(
+    to bottom,
+    #1f306e 0%,
+    hsl(227, 57%, 26%) 76%,
+    hsl(227, 54%, 30%) 105%
+  );
+  background: transparent linear-gradient(0deg, #15215e 0%, #1a3076 100%) 0% 0%
+    no-repeat padding-box;
+  box-shadow: 0px 10px 10px #00000040;
+  border-radius: 29px;
+}
+.subCommodityPop .title {
+  border-block-end: 2px solid var(--accent-blue2);
+  display: grid;
+  width: 100%;
+  justify-content: center;
+}
+
+.subCommodityPop .title::before {
+  content: '✕';
+  position: absolute;
+  color: var(--shade-blue);
+  font-weight: 200;
+  display: grid;
+  left: 1.2em;
+  justify-content: start;
+  margin-inline-end: auto;
+}
+
+.detailCommodityPop {
+  height: calc-size(100%, size + 100% - 6em);
+}
+.subCommodityDetail {
+  border-block-start: 1px solid var(--accent-blue2);
+  height: 100%;
+}
+.preview {
+  margin-block-start: -13em;
+  border: solid;
+}
+
+.capacity-management-container {
+  background-color: #0e1a45;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.content-container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.labels-container {
+  width: 40%;
+  padding-right: 20px;
+}
+
+.gauge-container {
+  width: 50%;
+  position: relative;
+}
+
+.category-label {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.category-name {
+  color: white;
+  font-size: 16px;
+}
+
+.category-value {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Custom colors for different percentage ranges */
+.category-value[data-value='77%'] {
+  color: #7ccc6c;
+}
+
+.category-value[data-value='56%'],
+.category-value[data-value='52%'],
+.category-value[data-value='50%'] {
+  color: #33cccc;
+}
+
+.category-value[data-value='34%'],
+.category-value[data-value='33%'] {
+  color: #3366cc;
+}
+
+/* Custom SVG styling */
+.custom-arcs,
+.center-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.center-icon {
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+  margin-top: -20px;
+  z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+  }
+
+  .labels-container,
+  .gauge-container {
+    width: 100%;
+  }
+
+  .labels-container {
+    order: 2;
+    padding-right: 0;
+    margin-top: 20px;
+  }
+
+  .gauge-container {
+    order: 1;
+    margin-bottom: 20px;
+  }
+}
+/* New styles for the labels */
+.labelsContainer {
+  position: absolute;
+  top: 18%;
+  left: 3%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 45%;
+  z-index: 4;
+  /* padding: 0; */
+  pointer-events: none;
+}
+
+.categoryLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+  padding: 4px 0;
+  margin-bottom: 1px;
+}
+.categoryLabel::after {
+  width: 120%; /* or any value larger than 100% */
+}
+.categoryName {
+  color: white;
+  font-size: 12px;
+  font-weight: normal;
+  padding-right: 10px;
+}
+
+.categoryValue {
+  font-size: 12px;
+  font-weight: normal;
+  min-width: 70px;
+  text-align: right;
+}
+
+/* Media query to hide labels on small screens and show them when needed */
+@container (max-width: 80em) {
+  .labelsContainer {
+    display: block;
+  }
+}
+
+@container (min-width: 80em) {
+  .labelsContainer {
+    display: none;
+  }
+}

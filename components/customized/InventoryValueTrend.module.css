@@ -1,0 +1,129 @@
+.wrapper {
+  display: grid;
+  color: white;
+  grid-template-rows: minmax(0,.3fr) max-content 1fr;
+  gap: 2em;
+  --block-shadow: 2px 2px 0px rgba(24, 69, 158, 0.7),
+    -2px -2px 0px rgba(9, 24, 97, 0.822);
+}
+.styledBlock {
+  box-sizing: border-box;
+  box-shadow: var(--block-shadow);
+  display: grid;
+  padding: 1em;
+  background: linear-gradient(
+      207deg,
+      oklab(0.2 -0.01 -0.11 /0.4) 25%,
+      rgba(36 29 155 / 0.4) 75%,
+      oklab(0.2 -0.01 -0.11 /0.4) 100%
+    ),
+    radial-gradient(
+      circle at center,
+      oklab(0.39 -0.03 -0.22 /0.4) 0%,
+      oklab(0.2 -0.01 -0.11 /0.4) 100%
+    );
+  border-radius: 14px;
+  min-height: 100%;
+}
+.chart {
+  display: gird;
+  align-self: stretch;
+}
+.chart > *{
+  min-height: 95%;
+}
+.inv {
+  display: grid;
+  grid-template-columns: 1.75fr 1fr 1fr;
+}
+.figureCard {
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 0.5em;
+  font-weight: 300;
+}
+.figureCard img {
+  grid-row: span 2;
+  grid-column: span 1;
+  align-self: center;
+  justify-self: end;
+  padding-inline-end: 1em;
+}
+.figureCard h2 {
+  font-size: 4rem;
+  display: grid;
+  line-height: 1;
+  align-items: end;
+  font-weight: 300;
+}
+.figureCard h3 {
+  font-size: 2rem;
+  display: grid;
+  font-weight: inherit;
+  align-items: start;
+  opacity: 0.47;
+  font-weight: inherit;
+  margin-inline-start: 0.1em;
+}
+
+.iconLabel h3 {
+  font-weight: inherit;
+  font-size: 1rem;
+  margin-block-start: 0.6em;
+}
+.subfigureCard {
+  cursor: pointer;
+  display: grid;
+  gap: 1em;
+  font-size: 1.2rem;
+  align-content: center;
+  font-weight: 300;
+}
+.subfigureCard__figure {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: baseline;
+  gap: 1em;
+}
+.subfigureCard__figure *:last-child {
+  opacity: 0.5;
+  font-weight: inherit;
+}
+.iconLabel {
+  position: relative;
+}
+.iconLabel::after {
+  content: '';
+  background-color: #31408db4;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  aspect-ratio: 1;
+  width: 32px;
+  border-radius: 50%;
+  translate: 1px -1px;
+}
+.subfigureCard:last-child .iconLabel::after {
+  translate: -5px -3px;
+}
+.subfigureCard:last-child .iconLabel__icon {
+  translate: 4px 0;
+}
+/* .iconLabel__icon {
+  border-radius: 60%;
+  aspect-ratio: 1;
+  min-height: 35px;
+  height: auto;
+  background-color: rgba(30, 54, 107, 0.774);
+  border: solid 5px rgba(30, 54, 107, 0.774);
+  padding-block-end: .2em;
+}
+
+.subfigureCard:last-child .iconLabel__icon {
+  min-height: 30px;
+  border: solid 5px rgba(30, 54, 107, 0.774);
+}
+*/

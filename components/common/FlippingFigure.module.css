@@ -1,0 +1,28 @@
+/* make it swaping */
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  min-width: 100%;
+}
+.front {
+  z-index: 2;
+  transform: rotateX(0deg);
+}
+.back {
+  transform: rotateX(180deg);
+}
+
+.frontBackWrapper {
+  padding-inline-start: var(--space-xs);
+}
+.flipping {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform-origin: 100% var(--transform-origin-shift, 0.65em); /* half of height */
+  transform: rotateX(var(--rotate-deg));
+}

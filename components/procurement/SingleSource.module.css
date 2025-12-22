@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+  display: grid;
+  column-gap: var(--space-xs);
+  grid-template-columns: 45% 1fr;
+}
+
+.invisible {
+  display: none;
+}
+
+.legend {
+  display: block;
+  margin-top: var(--space-md);
+  color: #fff;
+  font-weight: 500;
+}
+
+.row:first-child {
+  color: var(--unify-accent1);
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  column-gap: var(--space-xs);
+  align-items: flex-start;
+}
+.row + .row {
+  margin-block-start: var(--space-xxs);
+}
+
+.row:nth-child(2) {
+  color: var(--unify-accent2);
+}
+
+.row:last-child {
+  color: var(--proc-accent3);
+}
+
+.row .flipping {
+  display: grid;
+  position: relative;
+  padding-block-end: 1.25em;
+  font-size: 1.2rem;
+  justify-content: start;
+  align-items: flex-start;
+  text-align: start;
+}

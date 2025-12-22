@@ -1,0 +1,36 @@
+.wrapper {
+  color: white;
+  max-width: 90vw;
+  margin-inline: auto;
+  display: grid;
+  grid-row: 1/-1;
+}
+.mainHeader {
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), 1fr);
+  background-color: #7a86b6ba;
+  border: solid 1px #7a86b612;
+  column-gap: 2px;
+  row-gap: 2px;
+}
+.manuf {
+  grid-column: 1/-1;
+  grid-template-columns: repeat(var(--column-count), 1fr);
+  text-align: center;
+  background-color: #505fa0;
+}
+.quar {
+  text-align: center;
+  background-color: #2a3778;
+}
+.chart {
+  text-align: center;
+  background-color: #1c2b6e;
+  padding-inline: 0.3em;
+}
+
+.manuf,
+.chart,
+.quar {
+  padding-block: 0.3em;
+}

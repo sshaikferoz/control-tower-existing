@@ -1,0 +1,23 @@
+.container{
+  display: grid;
+  color: var(--unify-font-light);
+  gap: var(--space-sm);
+  padding-inline-end: 1em;
+}
+/* .wrap{display: grid;row-gap: var(--space-xxs);} */
+
+.valuePercent{
+  display: grid;
+  grid-template-columns: 1fr 1.3fr ;
+  column-gap: var(--space-sm);
+  font-size: var(--font-md);
+  align-items: baseline;
+}
+.wrap h3,.value{
+  font-size: .92rem;
+  font-weight: 300;
+  line-height: 1;
+}
+.percent{
+  font-size: var(--font-sm);
+}

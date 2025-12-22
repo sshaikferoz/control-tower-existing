@@ -1,0 +1,41 @@
+.base {
+  position: relative;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  aspect-ratio: 7.111;
+  height: 100vh;
+  background-image: var(--bg);
+  background-size: contain;
+  transform: translateX(calc(-100% * var(--bg-shift, 1) * 0.25));
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.kpi {
+  z-index: 4;
+  /* background: linear-gradient(
+    to bottom,
+    oklab(0.25 0 -0.12/.8) 30%,
+    oklab(0.29 -0.01 -0.13/.8) 70%,
+    oklab(0.42 -0.02 -0.27/.8) 150%
+  ); */
+  background: linear-gradient(
+    0deg,
+    #110d98 0,
+    #100d82fe 12%,
+    #0f1159fe 47%,
+    #11164afe 65%,
+    #141950fe 101%
+  );
+  border-bottom: 2.6px solid #2c3b7e;
+  margin-bottom: -11px;
+  translate: 0 -10px;
+  display: grid;
+  grid-column: 1/-1;
+  mix-blend-mode: lighten;
+  grid-row: 1/5;
+}

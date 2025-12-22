@@ -1,0 +1,47 @@
+.wrap {
+  display: grid;
+  /* border: solid 3xp; */
+  grid-template-columns: max-content 42px 1fr;
+  column-gap: 1em;
+  margin-block-start: 1em;
+  color: white;
+}
+.wrap img {
+  display: block;
+  padding: 8px;
+  max-width: 80%;
+  aspect-ratio: 1/1.2;
+  border-radius: 4px;
+}
+
+.wrap section:has(img) {
+  display: grid;
+  place-items: center;
+}
+.wrap section img {
+  background-color: #1a256d;
+}
+.wrap section:not(:has(img)) {
+  display: grid;
+  place-content: center;
+}
+.wrap h3 {
+  font-size: 1.3em;
+  font-weight: 300;
+  opacity: 0.9;
+}
+.wrap h5 {
+  font-size: 0.875em;
+  color: #4E63D8;
+  font-weight: 300;
+}
+.wrap h2 {
+  font-weight: 200;
+  font-size: 3.2rem;
+  align-self: center;
+  line-height: 1;
+}
+
+.wrap .smallUnit {
+  font-size: 0.68rem;
+}

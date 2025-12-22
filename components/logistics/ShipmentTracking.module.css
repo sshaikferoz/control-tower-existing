@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+}
+.image {
+  border-radius: var(--space-xs);
+  background-size: cover;
+  position: relative;
+}
+.image::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border:solid var(--space-xs) var(--bg) ;
+  opacity: .2;
+  border-radius: var(--space-xs);
+}

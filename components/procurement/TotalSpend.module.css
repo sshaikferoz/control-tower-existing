@@ -1,0 +1,119 @@
+.container {
+  display: grid;
+  width: 100%;
+  user-select: none;
+  row-gap: var(--space-xs);
+}
+.spendBreakdown {
+  display: grid;
+  row-gap: calc(1cqh + var(--space-sm));
+  align-content: center;
+}
+.spendBreakdownItem {
+  cursor: pointer;
+}
+.spendBreakdownItem img {
+  width: auto;
+  height: 70px;
+  margin-block-end: var(--space-xxs);
+  opacity: 0.9;
+  border-radius: 9px;
+  box-shadow: rgb(48 48 87 / 36%) 2px 3px 3px 2px;
+}
+.subTitle {
+  display: block;
+  color: var(--proc-accent1);
+  opacity: 0.75;
+  font-size: var(--font-sm);
+  font-weight: 300;
+}
+
+.title {
+  display: block;
+  color: var(--proc-accent1);
+  font-size: var(--font-md);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.container figure {
+  display: block;
+  color: #fff;
+
+  font-size: 4rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+.breakdownValue {
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+.breakdownValue h4 {
+  font-weight: 300;
+  font-size: var(--font-lg);
+}
+
+.totalSpend {
+  cursor: pointer;
+  z-index: 3333;
+}
+
+.contractSpendContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content 1fr;
+  min-height: 100%;
+  background: var(--bg);
+  border-radius: var(--dialog-radius);
+}
+
+.contractSpend {
+  border-radius: var(--dialog-radius) var(--dialog-radius) 0 0;
+  grid-column: span 2;
+  background: #e68b65;
+  color: var(--unify-font-light);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-block: var(--space-xs);
+}
+
+.contractSpend h3 {
+  text-transform: uppercase;
+  padding-block: var(--space-xs);
+  grid-column: span 2;
+  font-weight: 400;
+}
+.contractSpend p,
+.contractSplit p {
+  font-size: var(--font-lg);
+  font-weight: 500;
+  line-height: 1.4;
+}
+.contractSplit p:nth-child(3) {
+  font-size: 1.4em;
+}
+.contractSplit {
+  padding-block-start: var(--space-xxs);
+  background: var(--block-bg);
+  color: var(--unify-font-light);
+}
+.contractSplit h3 {
+  padding-block: var(--space-xs);
+  font-weight: 300;
+  color: #e68b65;
+}
+
+.contractSpend,
+.contractSplit {
+  text-align: center;
+}
+
+.servicePopup > div {
+  min-height: 3em;
+  display: grid;
+  place-items: center;
+}

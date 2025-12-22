@@ -1,0 +1,92 @@
+.wrap {
+  scale: 0.9;
+  transform-origin: left;
+  display: grid;
+  margin-inline-end: auto;
+  max-width: 43.75em;
+}
+.popup {
+  color: white;
+  display: var(--popup-show);
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  position: relative;
+  /* z-index: 3; */
+  aspect-ratio: 1.5;
+}
+.popup > * {
+  position: absolute;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  scale: 1.09;
+  inset: 0;
+  left:0.6em;
+  background-color: #1f306e;
+  background: linear-gradient(
+    to bottom,
+    #1f306e 0%,
+    hsl(227, 57%, 26%) 76%,
+    hsl(227, 54%, 30%) 105%
+  );
+  /* translate: -1px -1px; */
+  border-radius: 1em;
+  display: grid;
+  height: 100%;
+  aspect-ratio: 1.5;
+  max-width: calc(100% - 5em);
+}
+.inlineCard img {
+  grid-row: span 3;
+  max-width: 50%;
+  margin-inline: auto;
+  margin-block: auto;
+}
+.inlineCard h5 {
+  opacity: 0.6;
+  line-height: 2.5;
+  padding-inline-start: .3em;
+  font-weight: 300;
+}
+.inlineCard h2 {
+  margin: 0;
+  line-height: 1;
+  font-weight: 300;
+  font-size: 2rem;
+}
+.cardsWrap {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* min-height: 100%; */
+  gap: 1.5em;
+  aspect-ratio: 1.5;
+}
+.cardsWrap > * {
+  /* aspect-ratio: 1.5; */
+}
+
+.chart {
+  transition: opacity ease-in 0.2s;
+  opacity: var(--chart-show);
+  min-height: calc(100% - 7em);
+  bottom: 1em;
+  aspect-ratio: 1.5;
+  left: 50%;
+  translate: -50% 0;
+  position: absolute;
+}
+.inlineCard {
+  position: absolute;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 6em 1fr;
+  column-gap: 0em;
+  padding-block-start: 1em;
+}
+
+.customChart svg{
+  overflow: visible !important;
+}
+

@@ -1,0 +1,15 @@
+.chart {
+  /* max-width: 80%; */
+  /* margin-inline-start: auto; */
+  position: relative;
+}
+.chart svg {
+  position: absolute;
+  max-height: 66px;
+  transition: opacity 1.25s;
+}
+@starting-style {
+  .chart svg {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,21 @@
+.wrap {
+  background: var(--static-chart-src);
+  display: grid;
+  margin:.3em;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.wrap img {
+  grid-column: 1/-1;
+  grid-row: 2/-1;
+  /* display: block; */
+  max-width: 102%;
+  translate: -1px 0;
+  vertical-align: baseline;
+}
+
+.fixRatio {
+  /* aspect-ratio: 2.4; */
+  object-fit: cover;
+}

@@ -1,0 +1,66 @@
+.block {
+  display: grid;
+  grid-template-areas:
+    'value value sticker '
+    'period period percent';
+  column-gap: var(--space-xs);
+
+  padding-inline: 0 var(--space-sm);
+  padding-block-start: var(--space-md);
+}
+
+.blockTitle {
+  color: white;
+  font-size: var(--font-sm);
+}
+
+.value {
+  color: white;
+  grid-area: value;
+  font-size: 3.3rem;
+  font-weight: 200;
+  line-height: 1;
+  display: grid;
+  align-content: flex-end;
+  justify-content: center;
+  /* text-shadow: var(--sh-glow); */
+}
+
+.sticker {
+  grid-area: sticker;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+.sticker img {
+  height: 40px;
+}
+
+.period {
+  /* background-color: var(--unify-accent1); */
+  /* border-radius: 5px; */
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  grid-area: period;
+  display: grid;
+  place-items: center;
+}
+
+.percent {
+  /* background-color: var(--unify-accent2); */
+  /* border-radius: 5px; */
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 200;
+  text-transform: capitalize;
+  grid-area: percent;
+  display: grid;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+.invisible {
+  display: none;
+}

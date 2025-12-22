@@ -1,0 +1,41 @@
+[
+  {
+    "GroupId": "LWH",
+    "RowKey": "1 ",
+    "Text1": "",
+    "Value1": "664.00 ",
+    "Value2": "0.00 ",
+    "Value3": "0.00 ",
+    "Value4": "0.00 ",
+    "Value5": "0.00 ",
+    "ValueMonth": "0",
+    "ValueQuarter": "0",
+    "ValueYear": "0"
+  },
+  {
+    "GroupId": "LWH",
+    "RowKey": "2 ",
+    "Text1": "",
+    "Value1": "92.00 ",
+    "Value2": "0.00 ",
+    "Value3": "0.00 ",
+    "Value4": "0.00 ",
+    "Value5": "0.00 ",
+    "ValueMonth": "0",
+    "ValueQuarter": "0",
+    "ValueYear": "0"
+  },
+  {
+    "GroupId": "RPA",
+    "RowKey": "1 ",
+    "Text1": "",
+    "Value1": "1564.00 ",
+    "Value2": "56564.00 ",
+    "Value3": "999264.00 ",
+    "Value4": "0.00 ",
+    "Value5": "0.00 ",
+    "ValueMonth": "0",
+    "ValueQuarter": "0",
+    "ValueYear": "0"
+  }
+]

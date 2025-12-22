@@ -1,0 +1,26 @@
+
+.buttonsBase{
+  display: grid;
+  background-color: rgba(46, 45, 45, 0.3);
+  grid-template-columns: 1fr 1fr;
+  margin-inline: 2em;
+
+  /* margin-block-end: .4em; */
+}
+.buttonsBase > *{
+  border-style:outset;
+  /* border-style:inset; */
+  font-size: 1.1rem;
+  padding-block: .2em;
+  border-color: rgb(0, 0, 0,.2);
+  background-color:oklab(0.39 -0.01 -0.13 / 0.88);
+}
+
+.buttonsBase > *[data-unset=true]{
+  cursor: pointer;
+  background-color: unset;
+  border-color: unset;
+  border-style:unset;
+  translate: 0 3px ;
+  color: rgb(255, 255, 255,.4);
+}

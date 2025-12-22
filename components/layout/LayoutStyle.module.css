@@ -1,0 +1,55 @@
+.wrapper {
+  display: grid;
+  width: max(90%, 99vw);
+  min-height: calc(100vh - 150px);
+  margin-block-start: 1em;
+  margin-inline: auto;
+  overflow-x: hidden;
+  column-gap: 1em;
+}
+
+.title {
+  color: white;
+  font-weight: 400;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 1.7lh;
+  user-select: none;
+}
+.bgScreen1,
+.bgScreen2,
+.bgScreen3,
+.bgScreen4 {
+  z-index: -1;
+}
+
+.bgScreen1 {
+  --bg-shift: 0;
+}
+.bgScreen2 {
+  --bg-shift: 1;
+}
+.bgScreen3 {
+  --bg-shift: 2;
+}
+.bgScreen4 {
+  --bg-shift: 3;
+}
+
+.bg {
+  position: absolute;
+  aspect-ratio: 7.111;
+  height: 100vh;
+  background-image: var(--bg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateX(calc(-100% * var(--bg-shift, 0) * 0.25));
+  opacity: 0.7;
+  z-index: -1;
+}
+.bgParent {
+  position: absolute;
+  overflow: hidden;
+  inset: 0;
+}

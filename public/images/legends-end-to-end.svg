@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="548.966" height="12" viewBox="0 0 548.966 12">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_6037" data-name="Rectangle 6037" width="10" height="10" fill="#66a61e"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_6037-2" data-name="Rectangle 6037" width="10" height="10" fill="#00b1ff"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="Rectangle_6037-3" data-name="Rectangle 6037" width="10" height="10" fill="#e6ab02"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect id="Rectangle_6037-4" data-name="Rectangle 6037" width="10" height="10" fill="#af5a1b"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <rect id="Rectangle_6037-5" data-name="Rectangle 6037" width="10" height="10" fill="#e7298a"/>
+    </clipPath>
+  </defs>
+  <g id="legends_end_to_end" data-name="legends end to end" transform="translate(-626.91 -1022.801)">
+    <g id="Group_4171" data-name="Group 4171" transform="translate(493.065)">
+      <text id="Demand" transform="translate(152.412 1031.801)" fill="#fff" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Demand</tspan></text>
+      <g id="Group_4170" data-name="Group 4170" transform="translate(133.845 1023.295)" opacity="0.7">
+        <g id="Group_3852" data-name="Group 3852">
+          <g id="Group_3851" data-name="Group 3851" clip-path="url(#clip-path)">
+            <rect id="Rectangle_6036" data-name="Rectangle 6036" width="10" height="10" transform="translate(0)" fill="#66a61e"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_4172" data-name="Group 4172" transform="translate(608.165)">
+      <text id="Procurement" transform="translate(152.412 1031.801)" fill="#fff" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Procurement</tspan></text>
+      <g id="Group_4170-2" data-name="Group 4170" transform="translate(133.845 1023.295)" opacity="0.7">
+        <g id="Group_3852-2" data-name="Group 3852">
+          <g id="Group_3851-2" data-name="Group 3851" clip-path="url(#clip-path-2)">
+            <rect id="Rectangle_6036-2" data-name="Rectangle 6036" width="10" height="10" transform="translate(0)" fill="#00b1ff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_4173" data-name="Group 4173" transform="translate(743.264)">
+      <text id="Fulfillment" transform="translate(152.412 1031.801)" fill="#fff" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Fulfillment</tspan></text>
+      <g id="Group_4170-3" data-name="Group 4170" transform="translate(133.845 1023.295)" opacity="0.7">
+        <g id="Group_3852-3" data-name="Group 3852">
+          <g id="Group_3851-3" data-name="Group 3851" clip-path="url(#clip-path-3)">
+            <rect id="Rectangle_6036-3" data-name="Rectangle 6036" width="10" height="10" transform="translate(0)" fill="#e6ab02"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_4174" data-name="Group 4174" transform="translate(865.364)">
+      <text id="Logistics" transform="translate(152.412 1031.801)" fill="#fff" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Logistics</tspan></text>
+      <g id="Group_4170-4" data-name="Group 4170" transform="translate(133.845 1023.295)" opacity="0.7">
+        <g id="Group_3852-4" data-name="Group 3852">
+          <g id="Group_3851-4" data-name="Group 3851" clip-path="url(#clip-path-4)">
+            <rect id="Rectangle_6036-4" data-name="Rectangle 6036" width="10" height="10" transform="translate(0)" fill="#af5a1b"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_4175" data-name="Group 4175" transform="translate(979.463)">
+      <text id="Receiving" transform="translate(152.412 1031.801)" fill="#fff" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Receiving</tspan></text>
+      <g id="Group_4170-5" data-name="Group 4170" transform="translate(133.845 1023.295)" opacity="0.7">
+        <g id="Group_3852-5" data-name="Group 3852">
+          <g id="Group_3851-5" data-name="Group 3851" clip-path="url(#clip-path-5)">
+            <rect id="Rectangle_6036-5" data-name="Rectangle 6036" width="10" height="10" transform="translate(0)" fill="#e7298a"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+  gap: var(--space-sm);
+  grid-template-rows: 2.4fr  1fr;
+  --block-title-color: var(--unify-font-light);
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-sm);
+}
+.threeCol {
+  display: grid;
+  gap: var(--space-sm);
+  grid-template-columns: 1fr 1fr 1.01fr;
+}

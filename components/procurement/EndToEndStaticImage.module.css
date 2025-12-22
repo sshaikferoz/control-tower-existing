@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+  align-items: center;
+}
+
+.container svg {
+  width: 90%;
+  height: auto;
+  margin-inline: auto;
+}
+.endToEndImg {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  align-self: center;
+  margin-inline: auto;
+}

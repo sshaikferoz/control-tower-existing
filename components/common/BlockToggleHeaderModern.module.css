@@ -1,0 +1,37 @@
+.modern {
+  color: blue;
+}
+.buttonsBase {
+  margin-block-start: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2px;
+}
+.buttonsBase h2 {
+  line-height: 2.3;
+  font-size: 1.4rem;
+  min-width: 150px;
+  user-select: none;
+  border-radius: 33px 0 0 33px;
+  text-shadow: unset;
+  background-color: var(--accent-blue);
+}
+.buttonsBase h2:last-child {
+  border-radius: 0 33px 33px 0;
+  margin-inline-end: auto;
+}
+
+.buttonsBase h2:first-child {
+  margin-inline-start: auto;
+}
+
+.buttonsBase > *[data-unset='true'] {
+  cursor: pointer;
+  background-color: var(--shade-blue);
+  color:var(--dark-blue);
+}
+.buttonsBase > *[data-unset='true']:hover {
+  cursor: pointer;
+  background-color: #1b4cd3;
+  color:var(--dark-blue);
+}

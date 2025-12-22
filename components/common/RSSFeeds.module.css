@@ -1,0 +1,101 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(calc(var(--news-count)), max-content);
+  font-size: 1.2em;
+  gap: 0.5em;
+  transform: translate3d(0, 0, 0);
+  -webkit-font-smoothing: subpixel-antialiased;
+  transform-origin: 50% 50% 50%;
+  backface-visibility: hidden;
+}
+
+.wrap {
+  display: grid;
+  transform: translate3d(0, 0, 0);
+  -webkit-font-smoothing: subpixel-antialiased;
+  grid-template-columns: repeat(calc(var(--news-count)), 60vw);
+  font-size: 1.2em;
+  gap: 0.5em;
+  /* transform: translate3d(66vw, 0, 0); */
+  animation-duration: calc(var(--news-count) * 25000ms);
+  animation-name: news-line;
+  /* animation-delay: 2000ms; */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  justify-items: flex-start;
+  /* animation-play-state: running; */
+}
+
+@keyframes news-line {
+  0% {
+    transform: translate3d(76vw, 0, -0em);
+  }
+
+  100% {
+    transform: translate3d(calc(var(--news-count) * -66vw), var(--trans-top, -0em), 0);
+  }
+}
+
+.animate {
+}
+
+.latest {
+  background-image: linear-gradient(to right, #67a020 -28%, #0e9ed2 90%);
+  color: white;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  border: #0e2c6938 solid 3px;
+  scale: 1.04;
+  position: absolute;
+  top: 0;
+  font-weight: 400;
+  font-size: 1.1rem;
+  bottom: 0;
+  height: 1.8lh;
+  padding-inline: .8em;
+  translate: -2.5px 8px;
+  z-index: 1;
+}
+
+.main {
+  z-index: 2;
+  transform: translate3d(0, 0, 0);
+  margin-block-start: -0.3em;
+  margin-block-end: 0.4em;
+  padding: 1em;
+  border-radius: 35px;
+  /* border: #3874b6 solid 1.2px; */
+  height: 4em;
+  /* background-color: #09215c88; */
+  position: relative;
+}
+
+.main .newsWrap {
+  overflow: hidden;
+  padding-inline-start: 1em;
+  margin-inline-start: 1em;
+  /* translate: 0 -1px; */
+}
+
+.main a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.main dt {
+  color: rgba(211, 211, 211, 0.853);
+  font-size: 0.78em;
+  line-height: 1;
+}
+
+.main section {
+  margin-inline-start: 3em;
+}

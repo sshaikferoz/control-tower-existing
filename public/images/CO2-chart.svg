@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="595.189" height="217.04" viewBox="0 0 595.189 217.04">
+  <defs>
+    <filter id="_9.9K" x="133.62" y="13" width="39" height="26" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_74_" x="303.5" y="13.422" width="35" height="26" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="CO2-chart" transform="translate(-30 -835.579)">
+    <g id="Group_3339" data-name="Group 3339" transform="translate(-80.021 2.306)">
+      <text id="K_Ton_CO2_per_Annum" data-name="K Ton CO2 per Annum" transform="translate(117.021 957.21) rotate(-90)" fill="#c6cee9" font-size="7" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="-38" y="0">K Ton CO2 per Annum</tspan></text>
+      <g id="Group_3283" data-name="Group 3283" transform="translate(220.327 1038.313)">
+        <text id="_2050" data-name="2050" transform="translate(410.957 9)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-10" y="0">2050</tspan></text>
+        <text id="_2045" data-name="2045" transform="translate(344.298 9)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-10" y="0">2045</tspan></text>
+        <text id="_2040" data-name="2040" transform="translate(277.639 9)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-10" y="0">2040</tspan></text>
+        <text id="_2035" data-name="2035" transform="translate(210.979 9)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-10" y="0">2035</tspan></text>
+        <text id="_2030" data-name="2030" transform="translate(144.319 9)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-10" y="0">2030</tspan></text>
+        <text id="_2025" data-name="2025" transform="translate(77.659 9)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-10" y="0">2025</tspan></text>
+        <text id="_2020" data-name="2020" transform="translate(11 9)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-10" y="0">2020</tspan></text>
+      </g>
+      <g id="Group_3284" data-name="Group 3284" transform="translate(152.194 879.694)">
+        <text id="_0" data-name="0" transform="translate(27.827 142.976)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-5" y="0">0</tspan></text>
+        <text id="_2000" data-name="2000" transform="translate(27.827 122.489)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-21" y="0">2000</tspan></text>
+        <text id="_4000" data-name="4000" transform="translate(27.827 99.691)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-22" y="0">4000</tspan></text>
+        <text id="_6000" data-name="6000" transform="translate(27.827 76.893)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-22" y="0">6000</tspan></text>
+        <text id="_8000" data-name="8000" transform="translate(27.827 55.327)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-22" y="0">8000</tspan></text>
+        <text id="_10000" data-name="10000" transform="translate(27.827 29)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-24" y="0">10000</tspan></text>
+        <text id="_12000" data-name="12000" transform="translate(27.827 7)" fill="#c6cee9" font-size="9" font-family="Poppins-Regular, Poppins"><tspan x="-24" y="0">12000</tspan></text>
+      </g>
+      <path id="Path_10962" data-name="Path 10962" d="M25,0A25,25,0,1,1,0,25,25,25,0,0,1,25,0Z" transform="translate(238.141 833.273)" fill="#0cb191"/>
+      <g transform="matrix(1, 0, 0, 1, 110.02, 833.27)" filter="url(#_9.9K)">
+        <text id="_9.9K-2" data-name="9.9K" transform="translate(153.12 30.5)" fill="#c6cee9" font-size="16" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-17" y="0">9.9K</tspan></text>
+      </g>
+      <line id="Line_1330" data-name="Line 1330" x2="470.993" transform="translate(197.486 1026.665)" fill="none" stroke="#0083c1" stroke-width="1"/>
+      <g id="Group_3285" data-name="Group 3285" transform="translate(435.253 987.694) rotate(180)">
+        <line id="Line_1332" data-name="Line 1332" y2="108" transform="translate(4.376 0)" fill="none" stroke="#aaa" stroke-linecap="round" stroke-width="0.5" stroke-dasharray="1 2"/>
+      </g>
+      <g id="Group_3287" data-name="Group 3287" transform="translate(267.517 909.694) rotate(180)">
+        <line id="Line_1332-2" data-name="Line 1332" y2="31.421" transform="translate(4.376 0)" fill="none" stroke="#aaa" stroke-linecap="round" stroke-width="0.5" stroke-dasharray="1 2"/>
+      </g>
+      <g id="Group_3286" data-name="Group 3286" transform="translate(407.777 833.694)">
+        <circle id="Ellipse_274" data-name="Ellipse 274" cx="25" cy="25" r="25" transform="translate(-1.756)" fill="#0cb191"/>
+        <g transform="matrix(1, 0, 0, 1, -297.76, -0.42)" filter="url(#_74_)">
+          <text id="_74_2" data-name="74%" transform="translate(321 30.92)" fill="#c6cee9" font-size="16" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-15" y="0">74%</tspan></text>
+        </g>
+      </g>
+      <path id="Path_10949" data-name="Path 10949" d="M398.261,127.933,0,0" transform="translate(223.759 892.762)" fill="none" stroke="#e68b65" stroke-linecap="round" stroke-width="2"/>
+      <path id="Path_10952" data-name="Path 10952" d="M207.118,100.6,38.229,22.794,0,0" transform="translate(223.759 892.762)" fill="none" stroke="#0cb191" stroke-linecap="round" stroke-width="2"/>
+      <g id="Ellipse_277" data-name="Ellipse 277" transform="translate(425.021 987.694)" fill="#192f72" stroke="#0cb191" stroke-width="2">
+        <circle cx="6" cy="6" r="6" stroke="none"/>
+        <circle cx="6" cy="6" r="5" fill="none"/>
+      </g>
+      <g id="Ellipse_283" data-name="Ellipse 283" transform="translate(257.021 909.694)" fill="#192f72" stroke="#0cb191" stroke-width="2">
+        <circle cx="6" cy="6" r="6" stroke="none"/>
+        <circle cx="6" cy="6" r="5" fill="none"/>
+      </g>
+      <g id="Ellipse_284" data-name="Ellipse 284" transform="translate(217.021 886.694)" fill="#192f72" stroke="#e68b65" stroke-width="2">
+        <circle cx="6" cy="6" r="6" stroke="none"/>
+        <circle cx="6" cy="6" r="5" fill="none"/>
+      </g>
+      <g id="Ellipse_285" data-name="Ellipse 285" transform="translate(616.021 1014.694)" fill="#192f72" stroke="#e68b65" stroke-width="2">
+        <circle cx="6" cy="6" r="6" stroke="none"/>
+        <circle cx="6" cy="6" r="5" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_3342" data-name="Group 3342" transform="translate(0 16)">
+      <text id="P_SCM_Target" data-name="P&amp;SCM Target" transform="translate(570.189 858.752)" fill="#0cb191" font-size="8" font-family="Poppins-Regular, Poppins" letter-spacing="-0.011em"><tspan x="0" y="0">P&amp;SCM Target</tspan></text>
+      <text id="SA_Target" data-name="SA Target" transform="translate(571.617 832.852)" fill="#e68b65" font-size="8" font-family="Poppins-Regular, Poppins" letter-spacing="-0.011em"><tspan x="0" y="0">SA Target</tspan></text>
+      <g id="Group_3341" data-name="Group 3341" transform="translate(-7)">
+        <path id="Path_10963" data-name="Path 10963" d="M26,0H0" transform="translate(545.5 831.099)" fill="none" stroke="#e68b65" stroke-linecap="round" stroke-width="2"/>
+        <g id="Ellipse_281" data-name="Ellipse 281" transform="translate(552.5 825.099)" fill="#192f72" stroke="#e68b65" stroke-width="2">
+          <circle cx="6" cy="6" r="6" stroke="none"/>
+          <circle cx="6" cy="6" r="5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_3340" data-name="Group 3340" transform="translate(-7 1)">
+        <path id="Path_10964" data-name="Path 10964" d="M26,0H0" transform="translate(545.5 855)" fill="#192f72" stroke="#0cb191" stroke-linecap="round" stroke-width="2"/>
+        <g id="Ellipse_280" data-name="Ellipse 280" transform="translate(553 849)" fill="#192f72" stroke="#0cb191" stroke-width="2">
+          <circle cx="6" cy="6" r="6" stroke="none"/>
+          <circle cx="6" cy="6" r="5" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

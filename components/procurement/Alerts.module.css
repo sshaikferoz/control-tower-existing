@@ -1,0 +1,67 @@
+.wrapper {
+  margin-top: 14px;
+}
+.container {
+  /* --alert-bg: var(--proc-accent4); */
+  --alert-bg: rgba(31, 95, 155, 1);
+  --clip-path: polygon(3% 0, 100% 0, 100% 87%, 97% 100%, 0 100%, 0 15%);
+  --title-color: var(--unify-accent1);
+  --figure-color: #ffffff;
+  --border-color: var(--proc-accent2);
+  --icon-bg: var(--unify-accent1);
+  --padding-top: 7px;
+  --title-size: var(--font-lg);
+  --figure-size: 2.6rem;
+  display: grid;
+  position: relative;
+  grid-template-rows: repeat(var(--alert-row, 6), minmax(0, 1fr));
+  grid-template-columns: repeat(var(--alert-col, 1), 1fr);
+  column-gap: var(--space-sm);
+  row-gap: var(--alert-gap, var(--space-md));
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: space-evenly; */
+  padding: var(--alert-padding, var(--space-md));
+  padding-inline: var(--space-sm);
+  align-content: var(--alert-alignContent, center);
+  --alert-warn-color: var(--kpiYellow);
+}
+
+.alertItem {
+  border: 1px solid rgba(var(--gradient-bg-bottom), 0.2);
+  clip-path: var(--clip-path);
+  display: grid;
+  min-height: 4rem;
+  background-color: var(--alert-bg);
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+
+.alertItem:last-child {
+  margin-bottom: 0;
+}
+
+.alertText {
+  padding-top: 5px;
+}
+
+.alertText h1 {
+  color: var(--title-color);
+  font-size: var(--font-lg);
+  font-weight: 300;
+  line-height: 1.3;
+  text-shadow: var(--sh-title);
+}
+
+.alertText figure {
+  display: block;
+  color: var(--figure-color);
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.alertText figure span {
+  color: var(--figure-color);
+  font-size: 1.1rem;
+  font-weight: 200;
+}

@@ -1,0 +1,45 @@
+.component {
+  list-style: none;
+  padding: 0;
+  font-size: 0.775em;
+  color: white;
+  display: grid;
+  row-gap: 0.4em;
+  align-content: center;
+  padding: 1em;
+  background-color: #4f67ae;
+  border-radius: 12px;
+}
+
+.component li {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  column-gap: 1em;
+}
+.component .title{
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.2em;
+  min-height: 1.5lh;
+  font-weight: 500;
+}
+.component li span {
+  display: grid;
+  place-items: center;
+  font-weight: 200;
+  background-color: #0a3777;
+  color: #eeedec;
+  justify-content: start;
+  padding: 0.6em;
+  border-radius: 6px;
+}
+.component li span:not(.valueCell, .labelCell) {
+  scale: 1.8;
+  background-color: transparent;
+  padding: 0;
+}
+.component li .valueCell {
+  font-size: 0.955rem;
+  color: white;
+  font-weight: 400 ;
+}

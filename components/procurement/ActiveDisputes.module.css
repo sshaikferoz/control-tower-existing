@@ -1,0 +1,96 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.disputes {
+  position: relative;
+  /* margin-left: 25%; */
+  margin-bottom: var(--space-xs);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 8em;
+  height: 8em;
+  border: 1em solid var(--proc-accent1);
+  border-radius: 50%;
+  box-shadow: 5px 3px 5px #333;
+  color: #fff;
+}
+
+.disputes h1 {
+  font-size: var(--font-lg);
+  font-weight: 300;
+}
+
+.disputes span {
+  margin-top: -8px;
+  font-size: var(--font-md);
+  font-weight: 200;
+}
+
+.disputes .disputeSVG {
+  position: absolute;
+  width: 9.2em;
+  top: -2.5em;
+  left: 5.3em;
+}
+
+.claims {
+  position: absolute;
+  top: -2.65em;
+  left: 9.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 5em;
+  height: 5em;
+  border: 0.7em solid var(--proc-accent2);
+  /* border-right-color: var(--proc-accent3); */
+  border-radius: 50%;
+  box-shadow: 5px 3px 5px #333;
+  color: #fff;
+}
+
+.claims h1 {
+  font-size: var(--font-md);
+  font-weight: 300;
+}
+
+.claims span {
+  margin-top: -8px;
+  font-size: var(--font-sm);
+  font-weight: 200;
+}
+
+.claims .claimsSVG {
+  position: absolute;
+  width: 5.8em;
+  top: -1.6em;
+  left: 3.2em;
+}
+
+.legend {
+  margin-left: -20px;
+  margin-bottom: var(--space-sm);
+}
+
+.legend ul {
+  list-style: none;
+  color: #fff;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: -2px;
+  font-size: var(--font-sm);
+}
+
+.legend li svg {
+  margin-right: var(--space-xs);
+}

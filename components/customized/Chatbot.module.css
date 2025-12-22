@@ -1,0 +1,82 @@
+.wrapper {
+  transition: opacity 0.3s ease, display 0.3s ease allow-discrete;
+  opacity: 0;
+  display: none;
+  height: 100%;
+  max-height: calc(100% - 9vh);
+  margin-block-start: auto;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  min-height: 80vh;
+  width: 350px;
+  /* translate: 5px calc(3% + 5vh); */
+  z-index: 99999;
+  position: absolute;
+  inset: 0;
+}
+
+@starting-style {
+  .wrapper {
+    opacity: 0;
+  }
+}
+
+.chatWindowBoxed {
+  transition: opacity 0.3s ease, display 0.3s ease allow-discrete;
+  display: block;
+  opacity: 1;
+}
+
+@media screen and (max-height: 700px) {
+  .chatWindowBoxed {
+    height: calc(100vh - 50px);
+  }
+}
+
+.wrapper .acceleratorIntegration {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+.wrapper.chatWindowFullscreen {
+  position: absolute;
+  translate: unset;
+  inset: 0;
+  width: unset;
+}
+
+.wrapper .acceleratorIntegration .control {
+  position: absolute;
+  inset-block-start: 0.9em;
+  inset-inline-end: 0.4em;
+  height: 28px;
+  opacity: 0.01;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  aspect-ratio: 2;
+  column-gap: 0.2em;
+}
+.control span {
+  cursor: pointer;
+  border: solid;
+}
+
+.wrapper .chatWindow {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 75%);
+}
+.sami {
+  position: absolute;
+  inset-block-end: 0.8em;
+  z-index: 9999;
+  height: auto;
+  cursor: pointer;
+}
+.sami img {
+  max-width: 3.5em;
+}

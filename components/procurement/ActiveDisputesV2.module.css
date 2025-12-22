@@ -1,0 +1,102 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.container2 {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 4fr 1fr;
+}
+
+.col1 {
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: var(--space-lg);
+  display: flex;
+  color: #fff;
+}
+
+.disputes {
+  position: absolute;
+  top: calc(1 * 32%);
+  left: calc(1 * 84% - 70px);
+  color: #fff;
+  text-align: center;
+}
+
+.disputes h1 {
+  font-size: var(--font-lg);
+  font-weight: 300;
+  margin-bottom: -10px;
+}
+
+.disputes span {
+  font-size: var(--font-md);
+  font-weight: 200;
+}
+
+.col2 {
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+#claimsPi {
+  position: relative;
+  padding-top: 10px;
+  display: grid;
+  height: 90%;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.claims {
+  position: absolute;
+  /* top: calc(1 * 28%);
+  left: calc(1 * 24%); */
+  display: grid;
+  place-items: center;
+  inset: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.claims h1 {
+  font-size: var(--font-md);
+  font-weight: 300;
+  margin-bottom: -10px;
+}
+
+.claims span {
+  font-size: var(--font-sm);
+  font-weight: 200;
+}
+
+.legend {
+  margin-left: -20px;
+  /* margin-bottom: var(--space-sm); */
+}
+
+.legend ul {
+  display: flex;
+  list-style: none;
+  color: #fff;
+  gap: var(--space-sm);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: -2px;
+  font-size: var(--font-sm);
+}
+
+.legend li svg {
+  margin-right: var(--space-xxs);
+}

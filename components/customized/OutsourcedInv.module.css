@@ -1,0 +1,121 @@
+.centerContent {
+  display: grid;
+  /* align-content: center; */
+  /* justify-content: center; */
+}
+.wrap {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) max-content max-content;
+  row-gap: 1em;
+  container-type: inline-size;
+  justify-items: center;
+  min-height: 95%;
+  margin-block-start: 0;
+}
+.outsourcedInv {
+  position: relative;
+  text-wrap: balance;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+}
+.labels {
+  display: grid;
+  color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  padding-inline: 0.5em;
+  font-size: 0.95rem;
+  text-align: center;
+  gap: 0.6em;
+}
+.legends {
+  display: flex;
+
+  color: white;
+  list-style: none;
+  /* display: grid;
+  grid-template-columns: 3fr 1fr 1fr; */
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.65rem;
+  gap: 50px;
+}
+.legends li {
+  translate: 25% 0;
+}
+.legends li:nth-child(1)::before {
+  background-color: oklab(0.68 -0.14 0.02);
+  content: ' ';
+  position: absolute;
+  width: 35px;
+  height: calc(1lh - 8px);
+  border-radius: 3px;
+  translate: -120% 4px;
+}
+.legends li:nth-child(2)::before {
+  background-color: oklab(0.59 -0.02 -0.24);
+  content: ' ';
+  position: absolute;
+  width: 35px;
+  height: calc(1lh - 8px);
+  border-radius: 3px;
+  translate: -120% 4px;
+}
+.legends li:nth-child(3)::before {
+  background-color: oklab(0.8 0.02 0.14);
+  content: ' ';
+  position: absolute;
+  width: 35px;
+  height: calc(1lh - 8px);
+  border-radius: 3px;
+  translate: -120% 4px;
+}
+.bars {
+  margin-inline: auto;
+  display: grid;
+  list-style: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 4.5em;
+  padding-inline: 2em;
+  /* scale: 1.1; */
+}
+.bars li {
+  display: grid;
+  row-gap: 0.7em;
+  color: white;
+  grid-template-rows: var(--template-rows);
+  margin: 0;
+  padding: 0;
+}
+.bars li span {
+  display: grid;
+  place-items: center;
+  background-color: burlywood;
+  border-radius: 4px;
+  padding-inline: 0.8em;
+  min-width: 4.2em;
+}
+.bars li span:nth-child(2) {
+  background-color: oklab(0.8 0.02 0.14);
+}
+.bars li span:nth-child(3) {
+  background-color: oklab(0.59 -0.02 -0.24);
+}
+.bars li span:nth-child(4) {
+  background-color: oklab(0.68 -0.14 0.02);
+}
+.bars li span:first-child {
+  background-color: transparent;
+}
+
+.bars li span[data-empty='true'] {
+  background-color: transparent;
+  opacity: 0;
+}
+
+/* img */

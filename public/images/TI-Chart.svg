@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="953.899" height="440.224" viewBox="0 0 953.899 440.224">
+  <defs>
+    <filter id="Rectangle_5644" x="107.292" y="248.674" width="73.983" height="117.033" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_220" x="110.792" y="267.509" width="52.983" height="52.983" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_5646" x="255.636" y="74.3" width="73.983" height="337.44" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-3"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_220-2" x="259.136" y="166.429" width="52.983" height="52.983" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_5648" x="398.385" y="140.987" width="73.983" height="204.066" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-5"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_220-3" x="401.885" y="170.282" width="52.983" height="52.983" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-6"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_5656" x="553.07" y="335.707" width="73.983" height="76.011" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-7"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_220-4" x="556.57" y="349.787" width="52.983" height="52.983" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-8"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-8"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_5652" x="710.259" y="335.707" width="73.983" height="76.011" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-9"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-9"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_220-5" x="713.759" y="351.234" width="52.983" height="52.983" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-10"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-10"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_5650" x="859.913" y="335.707" width="73.983" height="76.011" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-11"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-11"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_220-6" x="863.413" y="351.234" width="52.983" height="52.983" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-12"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-12"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_220-7" x="762.43" y="0" width="41.407" height="41.407" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-13"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-13"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="T_I-Chart" data-name="T&amp;I-Chart" transform="translate(-924.306 -607.776)">
+    <g id="Group_3249" data-name="Group 3249" transform="translate(25.379 -80.924)">
+      <text id="Ras_Tanura_Refinery_10_01_2023" data-name="Ras Tanura Refinery 10/01/2023" transform="translate(1034.211 1106.924)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="-60" y="0">Ras Tanura Refinery </tspan><tspan x="-29" y="18">10/01/2023</tspan></text>
+      <text id="Shedgum_Gas_Plant_11_15_2023" data-name="Shedgum Gas Plant 11/15/2023" transform="translate(1786.326 1106.924)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="-60" y="0">Shedgum Gas Plant </tspan><tspan x="-27" y="18">11/15/2023</tspan></text>
+      <text id="Shaybah_Producing_Dept._11_01_2023" data-name="Shaybah Producing Dept. 11/01/2023" transform="translate(1634.326 1106.924)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="-76" y="0">Shaybah Producing Dept. </tspan><tspan x="-27" y="18">11/01/2023</tspan></text>
+      <text id="Juaymah_Gas_plant_10_30_2023" data-name="Juaymah Gas plant 10/30/2023" transform="translate(1478.922 1106.924)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="-60" y="0">Juaymah Gas plant </tspan><tspan x="-31" y="18">10/30/2023</tspan></text>
+      <text id="Yanbu_Refinery_11_01_2023" data-name="Yanbu Refinery 11/01/2023" transform="translate(1325.053 1106.924)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="-46" y="0">Yanbu Refinery </tspan><tspan x="-27" y="18">11/01/2023</tspan></text>
+      <text id="Ras_Tanura_Refinery_01_01_2024" data-name="Ras Tanura Refinery 01/01/2024" transform="translate(1181.359 1106.924)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="-60" y="0">Ras Tanura Refinery </tspan><tspan x="-29" y="18">01/01/2024</tspan></text>
+      <g id="Group_3044" data-name="Group 3044" transform="translate(946.253 1085.407)">
+        <line id="Line_133" data-name="Line 133" x2="906.573" fill="none" stroke="#0083c1" stroke-width="0.5"/>
+      </g>
+      <g id="Group_3060" data-name="Group 3060" transform="translate(898.927 767.821)">
+        <text id="_0" data-name="0" transform="translate(27.772 318.586)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">0</tspan></text>
+        <text id="_5000" data-name="5000" transform="translate(3.74 258.117)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">5000</tspan></text>
+        <text id="_10000" data-name="10000" transform="translate(0.026 196.568)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">10000</tspan></text>
+        <text id="_10000-2" data-name="10000" transform="translate(0.026 135.018)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">10000</tspan></text>
+        <text id="_25000" data-name="25000" transform="translate(0 13)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">25000</tspan></text>
+        <text id="_20000" data-name="20000" transform="translate(0 74.549)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">20000</tspan></text>
+      </g>
+      <g id="Group_3153" data-name="Group 3153" transform="translate(979 952.374)">
+        <g transform="matrix(1, 0, 0, 1, -80.07, -263.67)" filter="url(#Rectangle_5644)">
+          <path id="Rectangle_5644-2" data-name="Rectangle 5644" d="M.733,0H43.25a.733.733,0,0,1,.733.733V65.041A21.992,21.992,0,0,1,21.992,87.033h0A21.992,21.992,0,0,1,0,65.041V.733A.733.733,0,0,1,.733,0Z" transform="translate(156.28 350.71) rotate(180)" fill="#f3f6fb" opacity="0.1"/>
+        </g>
+        <path id="Rectangle_5645" data-name="Rectangle 5645" d="M.733,0H43.25a.733.733,0,0,1,.733.733V105.788a21.992,21.992,0,0,1-21.992,21.992h0A21.992,21.992,0,0,1,0,105.788V.733A.733.733,0,0,1,.733,0Z" transform="translate(76.203 133.114) rotate(180)" fill="#3569f8"/>
+        <g id="Group_3134" data-name="Group 3134" transform="translate(32.219 5.335)">
+          <g transform="matrix(1, 0, 0, 1, -112.29, -269.01)" filter="url(#Ellipse_220)">
+            <ellipse id="Ellipse_220-8" data-name="Ellipse 220" cx="21.992" cy="21.992" rx="21.992" ry="21.992" transform="translate(112.29 269.01)" fill="#749fef"/>
+          </g>
+          <ellipse id="Ellipse_221" data-name="Ellipse 221" cx="16.86" cy="16.86" rx="16.86" ry="16.86" transform="translate(5.131 5.131)" fill="#f9fbfc"/>
+          <text id="_97_" data-name="97%" transform="translate(20.53 26.928)" fill="#3569f8" font-size="12" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="-10" y="0">97%</tspan></text>
+        </g>
+        <g id="Group_3133" data-name="Group 3133" transform="translate(0 18.966)">
+          <circle id="Ellipse_220-9" data-name="Ellipse 220" cx="14" cy="14" r="14" fill="#0cb191"/>
+          <text id="_94_" data-name="94%" transform="translate(14 18)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="-11" y="0">94%</tspan></text>
+          <path id="Polygon_1" data-name="Polygon 1" d="M4,0,8,5H0Z" transform="translate(32.22 10) rotate(90)" fill="#0cb191"/>
+        </g>
+      </g>
+      <g id="Group_3152" data-name="Group 3152" transform="translate(1127.343 778)">
+        <g transform="matrix(1, 0, 0, 1, -228.42, -89.3)" filter="url(#Rectangle_5646)">
+          <path id="Rectangle_5646-2" data-name="Rectangle 5646" d="M.733,0H43.25a.733.733,0,0,1,.733.733V285.449A21.992,21.992,0,0,1,21.992,307.44h0A21.992,21.992,0,0,1,0,285.449V.733A.733.733,0,0,1,.733,0Z" transform="translate(304.62 396.74) rotate(180)" fill="#f3f6fb" opacity="0.1"/>
+        </g>
+        <path id="Rectangle_5647" data-name="Rectangle 5647" d="M.733,0H43.25a.733.733,0,0,1,.733.733V207.419A21.992,21.992,0,0,1,21.992,229.41h0A21.992,21.992,0,0,1,0,207.419V.733A.733.733,0,0,1,.733,0Z" transform="translate(76.203 307.44) rotate(180)" fill="#3569f8"/>
+        <g id="Group_3136" data-name="Group 3136" transform="translate(32.219 78.63)">
+          <g transform="matrix(1, 0, 0, 1, -260.64, -167.93)" filter="url(#Ellipse_220-2)">
+            <ellipse id="Ellipse_220-10" data-name="Ellipse 220" cx="21.992" cy="21.992" rx="21.992" ry="21.992" transform="translate(260.64 167.93)" fill="#749fef"/>
+          </g>
+          <ellipse id="Ellipse_221-2" data-name="Ellipse 221" cx="16.86" cy="16.86" rx="16.86" ry="16.86" transform="translate(5.131 5.131)" fill="#f9fbfc"/>
+          <text id="_78_" data-name="78%" transform="translate(20.53 26.928)" fill="#3569f8" font-size="12" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="-11" y="0">78%</tspan></text>
+        </g>
+        <g id="Group_3135" data-name="Group 3135" transform="translate(0 95.179)">
+          <circle id="Ellipse_220-11" data-name="Ellipse 220" cx="14" cy="14" r="14" fill="#0cb191"/>
+          <text id="_76_" data-name="76%" transform="translate(14 18)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="-10" y="0">76%</tspan></text>
+          <path id="Polygon_1-2" data-name="Polygon 1" d="M4,0,8,5H0Z" transform="translate(32.22 10) rotate(90)" fill="#0cb191"/>
+        </g>
+      </g>
+      <g id="Group_3151" data-name="Group 3151" transform="translate(1270.093 844.687)">
+        <g transform="matrix(1, 0, 0, 1, -371.17, -155.99)" filter="url(#Rectangle_5648)">
+          <path id="Rectangle_5648-2" data-name="Rectangle 5648" d="M.733,0H43.25a.733.733,0,0,1,.733.733V152.074a21.992,21.992,0,0,1-21.992,21.992h0A21.992,21.992,0,0,1,0,152.074V.733A.733.733,0,0,1,.733,0Z" transform="translate(447.37 330.05) rotate(180)" fill="#f3f6fb" opacity="0.1"/>
+        </g>
+        <path id="Rectangle_5649" data-name="Rectangle 5649" d="M.733,0H43.25a.733.733,0,0,1,.733.733V203.177a21.992,21.992,0,0,1-21.992,21.992h0A21.992,21.992,0,0,1,0,203.177V.733A.733.733,0,0,1,.733,0Z" transform="translate(76.203 240.964) rotate(180)" fill="#3569f8"/>
+        <g id="Group_3137" data-name="Group 3137" transform="translate(32.219 15.795)">
+          <g transform="matrix(1, 0, 0, 1, -403.38, -171.78)" filter="url(#Ellipse_220-3)">
+            <ellipse id="Ellipse_220-12" data-name="Ellipse 220" cx="21.992" cy="21.992" rx="21.992" ry="21.992" transform="translate(403.38 171.78)" fill="#749fef"/>
+          </g>
+          <ellipse id="Ellipse_221-3" data-name="Ellipse 221" cx="16.86" cy="16.86" rx="16.86" ry="16.86" transform="translate(5.131 5.131)" fill="#f9fbfc"/>
+          <text id="_95_" data-name="95%" transform="translate(20.53 26.928)" fill="#3569f8" font-size="12" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="-11" y="0">95%</tspan></text>
+        </g>
+        <g id="Group_3138" data-name="Group 3138" transform="translate(0 32.506)">
+          <circle id="Ellipse_220-13" data-name="Ellipse 220" cx="14" cy="14" r="14" fill="#0cb191"/>
+          <text id="_88_" data-name="88%" transform="translate(14 18)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="-11" y="0">88%</tspan></text>
+          <path id="Polygon_1-3" data-name="Polygon 1" d="M4,0,8,5H0Z" transform="translate(32.22 10) rotate(90)" fill="#0cb191"/>
+        </g>
+      </g>
+      <g id="Group_3150" data-name="Group 3150" transform="translate(1422.777 1039.407)">
+        <g transform="matrix(1, 0, 0, 1, -523.85, -350.71)" filter="url(#Rectangle_5656)">
+          <path id="Rectangle_5656-2" data-name="Rectangle 5656" d="M.733,0H43.25a.733.733,0,0,1,.733.733V24.019A21.992,21.992,0,0,1,21.992,46.011h0A21.992,21.992,0,0,1,0,24.019V.733A.733.733,0,0,1,.733,0Z" transform="translate(602.05 396.72) rotate(180)" fill="#f3f6fb" opacity="0.1"/>
+        </g>
+        <path id="Rectangle_5657" data-name="Rectangle 5657" d="M.733,0H43.25a.733.733,0,0,1,.733.733V14.817A21.992,21.992,0,0,1,21.992,36.809h0A21.992,21.992,0,0,1,0,14.817V.733A.733.733,0,0,1,.733,0Z" transform="translate(78.203 46.011) rotate(180)" fill="#3569f8"/>
+        <g id="Group_3145" data-name="Group 3145" transform="translate(34.219 0.581)">
+          <g transform="matrix(1, 0, 0, 1, -558.07, -351.29)" filter="url(#Ellipse_220-4)">
+            <ellipse id="Ellipse_220-14" data-name="Ellipse 220" cx="21.992" cy="21.992" rx="21.992" ry="21.992" transform="translate(558.07 351.29)" fill="#749fef"/>
+          </g>
+          <ellipse id="Ellipse_221-4" data-name="Ellipse 221" cx="16.86" cy="16.86" rx="16.86" ry="16.86" transform="translate(5.131 5.131)" fill="#f9fbfc"/>
+          <text id="_84_" data-name="84%" transform="translate(21.263 26.928)" fill="#3569f8" font-size="12" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="-11" y="0">84%</tspan></text>
+        </g>
+        <g id="Group_3146" data-name="Group 3146" transform="translate(0 9.494)">
+          <circle id="Ellipse_220-15" data-name="Ellipse 220" cx="14" cy="14" r="14" fill="#0cb191"/>
+          <text id="_88_2" data-name="88%" transform="translate(14 18)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="-11" y="0">88%</tspan></text>
+          <path id="Polygon_1-4" data-name="Polygon 1" d="M4,0,8,5H0Z" transform="translate(32.22 10) rotate(90)" fill="#0cb191"/>
+        </g>
+      </g>
+      <g id="Group_3148" data-name="Group 3148" transform="translate(1580.967 1039.407)">
+        <g transform="matrix(1, 0, 0, 1, -682.04, -350.71)" filter="url(#Rectangle_5652)">
+          <path id="Rectangle_5652-2" data-name="Rectangle 5652" d="M.733,0H43.25a.733.733,0,0,1,.733.733V24.019A21.992,21.992,0,0,1,21.992,46.011h0A21.992,21.992,0,0,1,0,24.019V.733A.733.733,0,0,1,.733,0Z" transform="translate(759.24 396.72) rotate(180)" fill="#f3f6fb" opacity="0.1"/>
+        </g>
+        <path id="Rectangle_5653" data-name="Rectangle 5653" d="M.733,0H43.25a.733.733,0,0,1,.733.733V20.185A21.992,21.992,0,0,1,21.992,42.177h0A21.992,21.992,0,0,1,0,20.185V.733A.733.733,0,0,1,.733,0Z" transform="translate(77.202 46.011) rotate(180)" fill="#3569f8"/>
+        <g id="Group_3141" data-name="Group 3141" transform="translate(33.219 2.027)">
+          <g transform="matrix(1, 0, 0, 1, -715.26, -352.73)" filter="url(#Ellipse_220-5)">
+            <ellipse id="Ellipse_220-16" data-name="Ellipse 220" cx="21.992" cy="21.992" rx="21.992" ry="21.992" transform="translate(715.26 352.73)" fill="#749fef"/>
+          </g>
+          <ellipse id="Ellipse_221-5" data-name="Ellipse 221" cx="16.86" cy="16.86" rx="16.86" ry="16.86" transform="translate(5.131 5.131)" fill="#f9fbfc"/>
+          <text id="_94_2" data-name="94%" transform="translate(21.263 26.928)" fill="#3569f8" font-size="12" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="-11" y="0">94%</tspan></text>
+        </g>
+        <g id="Group_3142" data-name="Group 3142" transform="translate(0 16.362)">
+          <circle id="Ellipse_220-17" data-name="Ellipse 220" cx="14" cy="14" r="14" fill="#0cb191"/>
+          <text id="_88_3" data-name="88%" transform="translate(14 18)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="-11" y="0">88%</tspan></text>
+          <path id="Polygon_1-5" data-name="Polygon 1" d="M4,0,8,5H0Z" transform="translate(32.22 10) rotate(90)" fill="#0cb191"/>
+        </g>
+      </g>
+      <g id="Group_3147" data-name="Group 3147" transform="translate(1730.621 1039.407)">
+        <g transform="matrix(1, 0, 0, 1, -831.69, -350.71)" filter="url(#Rectangle_5650)">
+          <path id="Rectangle_5650-2" data-name="Rectangle 5650" d="M.733,0H43.25a.733.733,0,0,1,.733.733V24.019A21.992,21.992,0,0,1,21.992,46.011h0A21.992,21.992,0,0,1,0,24.019V.733A.733.733,0,0,1,.733,0Z" transform="translate(908.9 396.72) rotate(180)" fill="#f3f6fb" opacity="0.1"/>
+        </g>
+        <path id="Rectangle_5651" data-name="Rectangle 5651" d="M.733,0H43.25a.733.733,0,0,1,.733.733V21.974A21.992,21.992,0,0,1,21.992,43.966h0A21.992,21.992,0,0,1,0,21.974V.733A.733.733,0,0,1,.733,0Z" transform="translate(77.203 46.011) rotate(180)" fill="#3569f8"/>
+        <g id="Group_3139" data-name="Group 3139" transform="translate(33.219 2.027)">
+          <g transform="matrix(1, 0, 0, 1, -864.91, -352.73)" filter="url(#Ellipse_220-6)">
+            <ellipse id="Ellipse_220-18" data-name="Ellipse 220" cx="21.992" cy="21.992" rx="21.992" ry="21.992" transform="translate(864.91 352.73)" fill="#749fef"/>
+          </g>
+          <ellipse id="Ellipse_221-6" data-name="Ellipse 221" cx="16.86" cy="16.86" rx="16.86" ry="16.86" transform="translate(5.131 5.131)" fill="#f9fbfc"/>
+          <text id="_99_" data-name="99%" transform="translate(20.53 26.928)" fill="#3569f8" font-size="12" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="-11" y="0">99%</tspan></text>
+        </g>
+        <g id="Group_3140" data-name="Group 3140" transform="translate(0 16.362)">
+          <circle id="Ellipse_220-19" data-name="Ellipse 220" cx="14" cy="14" r="14" fill="#0cb191"/>
+          <text id="_87_" data-name="87%" transform="translate(14 18)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="-10" y="0">87%</tspan></text>
+          <path id="Polygon_1-6" data-name="Polygon 1" d="M4,0,8,5H0Z" transform="translate(32.22 10) rotate(90)" fill="#0cb191"/>
+        </g>
+      </g>
+      <text id="_267" data-name="267" transform="translate(1469.695 1025.407)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">267</tspan></text>
+      <text id="_8_503" data-name="8,503" transform="translate(1019 942.857)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">8,503</tspan></text>
+      <text id="_24_532" data-name="24,532" transform="translate(1162.248 763.45)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">24,532</tspan></text>
+      <text id="_1_761" data-name="1,761" transform="translate(1625.273 1025.407)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">1,761</tspan></text>
+      <text id="_225" data-name="225" transform="translate(1775.326 1025.407)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">225</tspan></text>
+      <text id="_18_588" data-name="18,588" transform="translate(1308.004 829.521)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">18,588</tspan></text>
+    </g>
+    <g id="Group_3250" data-name="Group 3250" transform="translate(1671.084 608.257)">
+      <g id="Group_3026" data-name="Group 3026">
+        <rect id="Rectangle_5020" data-name="Rectangle 5020" width="184.121" height="65.062" transform="translate(7 5)" fill="#346dbc" stroke="rgba(0,0,0,0)" stroke-width="1" opacity="0.15"/>
+        <text id="Total_Requirements" data-name="Total Requirements" transform="translate(43.916 23.781)" fill="#fff" font-size="10" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Total Requirements</tspan></text>
+        <text id="Plan_" data-name="Plan " transform="matrix(1, -0.004, 0.004, 1, 43.968, 41.433)" fill="#fff" font-size="10" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Plan </tspan></text>
+        <text id="Actual" transform="translate(43.916 59.431)" fill="#fff" font-size="10" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Actual</tspan></text>
+      </g>
+      <g id="Group_3177" data-name="Group 3177" transform="translate(21.152 50.019)">
+        <ellipse id="Ellipse_221-7" data-name="Ellipse 221" cx="5.109" cy="5.109" rx="5.109" ry="5.109" fill="#f9fbfc"/>
+      </g>
+      <g id="Group_3178" data-name="Group 3178" transform="translate(21.152 33.019)">
+        <ellipse id="Ellipse_220-20" data-name="Ellipse 220" cx="5.204" cy="5.204" rx="5.204" ry="5.204" fill="#0cb191"/>
+      </g>
+      <g id="Group_3251" data-name="Group 3251" transform="translate(21.152 15.019)">
+        <g transform="matrix(1, 0, 0, 1, -767.93, -15.5)" filter="url(#Ellipse_220-7)">
+          <ellipse id="Ellipse_220-21" data-name="Ellipse 220" cx="5.204" cy="5.204" rx="5.204" ry="5.204" transform="translate(767.93 15.5)" fill="#f3f6fb" stroke="rgba(0,0,0,0)" stroke-width="1" opacity="0.1"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

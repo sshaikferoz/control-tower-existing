@@ -1,0 +1,178 @@
+.wrapper {
+  /* display: grid; */
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  color: white;
+  display: grid;
+  gap: 1em;
+  /* grid-template-rows: max-content 1fr max-content; */
+}
+.commodityContainer {
+  display: grid;
+  margin-inline: auto;
+  max-width: calc(var(--commodity-count) * (27em - 3vw));
+  grid-template-columns: repeat(var(--commodity-count), minmax(22em, 1fr));
+  align-content: baseline;
+  align-self: baseline;
+  color: white;
+  margin-block-start: 1.5em;
+  margin-block-end: 8em;
+  justify-content: space-around;
+}
+.commodityContainer:has(.activeItem) .item:not(.activeItem) {
+  opacity: 0.6;
+}
+
+.item {
+  display: grid;
+}
+
+.item > * {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: grid;
+  align-content: baseline;
+}
+
+.item .summary {
+  width: min(200px, 100%);
+  /* height: calc(100% - 70px); */
+  height: fit-content;
+  height: calc-size(fit-content, size + 1em);
+  gap: 0.2em;
+  gap: 0.3em;
+  margin: auto;
+  z-index: 2;
+}
+
+.summary :is(h3, p) {
+  opacity: 0.8;
+  font-weight: 400;
+  text-align: center;
+  z-index: 3;
+  font-size: 0.8rem;
+}
+.summary :is(h2, h3) {
+  line-height: 1;
+  text-wrap: balance;
+  text-align: center;
+  /* max-width: 90%; */
+  /* scale: 0.9; */
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.doughnut {
+  position: relative;
+  width: 64%;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  margin-block-start: 1.5em;
+}
+
+.doughnut progress {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 50%;
+  background: conic-gradient(#66bb6a var(--gauge-value), #20388f 0);
+}
+
+/* Since Edge 17 doesn't support masking, we go for a white overlay */
+.doughnut::before {
+  content: '';
+  /* content: attr(data-value) '%'; */
+  position: absolute;
+  background-color: #213583;
+  box-shadow: 0px 10px 10px #0000000e;
+  border-radius: 50%;
+  top: 8px;
+  right: 8px;
+  bottom: 10px;
+  left: 8px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.doughnut::before:hover {
+  cursor: pointer;
+  background: transparent
+    radial-gradient(closest-side at 38% 46%, #4f84d95d -10%, #213583 130%) 0% 0%
+    no-repeat padding-box;
+}
+.wrapper .legends {
+  display: grid;
+  grid-template-columns: repeat(var(--legend-count), max-content);
+  column-gap: 2em;
+  justify-content: center;
+}
+.wrapper .legends.legendsDown {
+  bottom: 4.5em;
+}
+.wrapper .legends span:last-child {
+  display: grid;
+
+  /* place-items: center; */
+}
+.wrapper .legends span:first-child {
+  float: left;
+  width: 0.8lh;
+  aspect-ratio: 1.2;
+  margin-inline-end: 1em;
+  translate: 0 20%;
+}
+
+.overviewChart {
+  display: grid;
+  position: relative;
+  justify-items: center;
+  font-size: 11;
+}
+.overviewChart > *:first-child {
+  margin: 0;
+}
+.overviewChart > *:last-child {
+  width: min(55%, 550px);
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  margin-block-end: -8em;
+}
+
+.wrap::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  display: block;
+}
+
+/* Define the thumb style */
+.wrap::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
+.wrap:hover::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom right, #4d7fff55 0%, #1a56ff99 100%);
+  border-radius: 5px;
+}
+.manufactureTable {
+  overflow: auto;
+  container-type: inline-size;
+  max-height: calc(50vh - 8em);
+}
+/* Define the scrollbar style */
+.manufactureTable::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  display: block;
+}
+
+/* Define the thumb style */
+.manufactureTable::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
+.manufactureTable:hover::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom right, #4d7fff55 0%, #1a56ff99 100%);
+  border-radius: 5px;
+}
+.manufactureTable_body {
+}

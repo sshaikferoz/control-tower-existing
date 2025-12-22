@@ -1,0 +1,8 @@
+.autoFit {
+  --cols: 9;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, max-content));
+  /* gap: 6em; */
+  padding-inline: 4.5em;
+  justify-content: space-between;
+}

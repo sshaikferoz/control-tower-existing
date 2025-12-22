@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+@font-face {
+  font-family: 'ManifaV2 Bold';
+  src: url('/fonts/ManifaV2-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ManifaV2 Bold Italics';
+  src: url('/fonts/ManifaV2-BoldItalics.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ManifaV2 SemiBold';
+  src: url('/fonts/ManifaV2-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ManifaV2 Regular';
+  src: url('/fonts/ManifaV2-RegularItalics.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ManifaV2 Regular Italics';
+  src: url('/fonts/ManifaV2-RegularItalics.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ManifaV2 Light';
+  src: url('/fonts/ManifaV2-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ManifaV2 Light Italics';
+  src: url('/fonts/ManifaV2-LightItalics.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ManifaV2 Thin';
+  src: url('/fonts/ManifaV2-Thin.ttf') format('truetype');
+}

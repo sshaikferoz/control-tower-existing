@@ -1,0 +1,18 @@
+.container {
+  display: grid;
+  grid-template-rows: 7fr 1fr 3fr;
+  justify-content: center;
+  grid-gap: var(--space-xxs);
+  text-align: center;
+}
+.color {
+  border-top: solid 6px;
+  width: 47%;
+  /* border-radius: 11px; */
+  margin: 0 auto;
+}
+.container img {
+  display: block;
+  margin-inline: auto;
+  width: 40%;
+}

@@ -1,0 +1,14 @@
+.zoneContent {
+  background: oklab(0.49 -0.04 -0.15 / 0.18);
+  display: grid;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  padding: 0.3em;
+}
+
+.zoneContent[data-handle-title] {
+  grid-row: 3/-1;
+}
+.zoneContent:has(img,section,div) {
+  background: none;
+}

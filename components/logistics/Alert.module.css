@@ -1,0 +1,98 @@
+.container {
+  --alert-bg: rgba(31, 95, 155, 1);
+  --bg: #001c52;
+  --clip-path: polygon(3% 0, 100% 0, 100% 87%, 97% 100%, 0 100%, 0 15%);
+  --color: #c4c7da;
+  --border-color: #c4c7da77;
+  --icon-bg: #ffd8bb;
+  --title-color: var(--unify-accent1);
+  --padding-top: 3px;
+  --title-size: 1.4rem;
+  --figure-size: 2rem;
+  --alert-warn-color: var(--kpiYellow);
+
+  display: grid;
+  gap: var(--space-xs);
+  flex: 1;
+  min-height: 100%;
+}
+
+.alertCards {
+  display: grid;
+  column-gap: var(--space-sm);
+  row-gap: var(--space-sm);
+  grid-template-columns: repeat(var(--alert-col, 2), 1fr);
+  grid-template-rows: repeat(var(--alert-row, 5), max-content);
+  align-content: center;
+
+}
+
+.alertIcon {
+  margin-inline: auto;
+}
+.alertCard{
+  margin-inline: auto;
+  grid-column: span 2;
+}
+.alertItem {
+  position: relative;
+  clip-path: var(--clip-path);
+  display: grid;
+  border: 1px solid rgba(var(--gradient-bg-bottom), 0.2);
+  min-height: 7em;
+  z-index: 11;
+  color: var(--color);
+  background-color: var(--alert-bg);
+  grid-template-columns: 65px 1fr;
+  gap: var(--space-xs);
+  align-items: center;
+  padding: var(--space-xs);
+}
+
+.alertItem h2 {
+  color: var(--unify-accent1);
+  font-size: var(--font-md);
+  font-weight: 300;
+  padding-right: var(--space-sm);
+  line-height: 1.3;
+}
+
+.alertItem h3 {
+  color: var(--unify-accent1);
+  font-weight: bolder;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+}
+
+.alertItem h3 span {
+  color: var(--unify-accent1);
+  padding-left: 7px;
+  font-weight: lighter;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+}
+
+.separator {
+  position: relative;
+  grid-column: span 2;
+  display: flex;
+  row-gap: 0;
+  color: var(--unify-accent1);
+  padding-inline: var(--space-md);
+}
+
+.separator > * {
+  margin: auto;
+}
+
+.alertSticker {
+  display: flex;
+  color: var(--unify-accent1);
+  flex-direction: column;
+  align-items: center;
+}
+
+.separator img {
+  height: 100%;
+  max-height: 4.2rem;
+}

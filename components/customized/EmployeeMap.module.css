@@ -1,0 +1,110 @@
+.wrapper {
+  display: gird;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+}
+.vectorMap {
+  position: absolute;
+  inset: 0;
+  inset-inline-start: 1.25em;
+  inset-inline-end: 2.5em;
+  inset-block-start: 1em;
+  inset-block-end: 3em;
+  grid-column: 1 / -1;
+}
+
+.typeCategory {
+  --active-item-color: #143a7b;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  inset-block: 0;
+  inset-block-start: 2em;
+  inset-inline-end: 1em;
+
+  grid-column: 1/-1;
+  display: grid;
+  align-content: start;
+  justify-content: end;
+  list-style: none;
+  color: var(--unify-font-light);
+  gap: 1em;
+}
+.typeCategory li {
+  /* background-color: rgba(60, 44, 183, 0.25); */
+  background-color: #195494;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  place-items: center;
+  /* border: solid 2px rgb(60, 44, 183, 0.3); */
+  cursor: pointer;
+  padding-block: 1rem;
+  padding-inline: 0.5rem;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 0px rgba(26, 40, 97, 0.7), -2px -2px 0px rgba(46, 89, 175, 0.7);
+  row-gap: 0.8em;
+  column-gap: 4em;
+  color: rgb(249, 202, 167);
+  min-width: 13em;
+  font-weight: 200;
+}
+.typeCategory li *:first-child {
+  color: white;
+  font-size: 1.25rem;
+  grid-column: span 2;
+}
+
+.typeCategory li:hover {
+  background-color: rgb(30, 22, 85, 0.5);
+  background-color: #294575;
+  background-color: var(--active-item-color) !important;
+}
+.typeCategory li.active {
+  background-color: rgb(30, 22, 85, 0.5);
+  background-color: var(--active-item-color) !important;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* font-size: 3em; */
+  column-gap: 0.8em;
+}
+.typeCategory li.active *:first-child {
+  grid-column: span 3;
+}
+.typeCategory li.active:hover {
+  /* background-color: rgb(30, 22, 85, 0.4); */
+  background-color: #294575;
+  background-color: #18386e;
+  /* font-size: 3em; */
+}
+
+.typeCategory li.unclickable {
+  cursor: auto;
+}
+.typeCategory li.unclickable:hover {
+  background-color: #195494;
+}
+
+.threshold {
+  z-index: 5;
+  position: absolute;
+  margin-block-start: 4em;
+  min-width: 40vw;
+  /* visibility: hidden; */
+}
+.threshold::before {
+  content: '> ' attr(data-value);
+  color: aliceblue;
+  /* border: solid; */
+  position: absolute;
+  inset: 0;
+  translate: 0 -130%;
+}
+
+.svgBubble:focus,
+.svgBubble > *:focus {
+  border-width: 0 !important;
+  border-color: transparent !important;
+  outline-width: 0 !important;
+  outline-color: transparent !important;
+}

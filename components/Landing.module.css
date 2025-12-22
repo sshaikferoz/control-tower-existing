@@ -1,0 +1,77 @@
+.container {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  row-gap: 2em;
+  justify-content: center;
+}
+.primeryNav {
+  align-self: flex-end;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: baseline;
+}
+.primeryNav button {
+  color: var(--color-accent, darkblue);
+  border: none;
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+  outline: inherit;
+}
+.primeryNav button:focus-visible,
+.primeryNav a:focus-visible {
+  outline: solid 3px #c4c4cc !important;
+  outline-offset: 2px;
+}
+
+.tile {
+  cursor: pointer;
+  width: 14em;
+  height: 5.5em;
+  background: linear-gradient(180deg, #f7f7f7 0%, #c4c4d4 80%);
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 10px;
+  padding-inline: var(--space-sm);
+  text-decoration: none;
+}
+
+.menuWithSubmenu {
+  margin-top: 1em;
+  visibility: var(--menu-visible, hidden);
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: var(--space-xs);
+}
+.secondaryNav {
+  display: grid;
+  grid-auto-rows: max-content;
+  gap: var(--space-xxs);
+  color: #1f1f23;
+}
+.secondaryNav a {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--space-xxs);
+  max-width: 200px;
+  color: #cefc;
+  text-decoration: none;
+}
+.secondaryNav a:hover {
+  background-color: rgb(104, 127, 175, 0.5);
+}
+
+.tile:hover {
+  box-shadow: var(--sh-glow);
+  transition: box-shadow 0.3s;
+}
+
+.tile:active {
+  box-shadow: 0 0 8px #444 inset;
+}

@@ -1,0 +1,129 @@
+.procurementContainer {
+  --mapSize: calc(58cqh + 15em);
+  display: grid;
+  gap: 0 var(--space-sm);
+  grid-template-columns: minmax(300px, 400px) 1fr;
+  --block-title-color: var(--unify-font-light);
+  container-type: inline-size;
+}
+
+.smallColumn {
+  display: grid;
+  gap: var(--space-sm) 0;
+}
+
+.bigColumn {
+  display: grid;
+}
+
+.bigColumnRss {
+  display: grid;
+  /* grid-template-rows: max-content 1fr ; */
+  gap: var(--space-sm);
+}
+.mapArea {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+}
+
+.mapAreaForRss{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  translate: 0 -1.2%;
+
+}
+.bigColumnRss .mapArea{
+}
+.map {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: grid;
+  align-self: center;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.artboard img {
+  height: calc(100vh - 120px);
+  transform: translate(0, 15px);
+}
+
+.artboard {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bigBlock {
+  display: grid;
+  grid-template-rows: 1fr 190px;
+}
+
+.totalSpend {
+  display: grid;
+  width: 60%;
+  /* height: auto; */
+  grid-column: 1 / 4;
+  grid-row: 1/-1;
+  padding-inline-start: var(--space-sm);
+}
+
+.last5yr {
+  display: grid;
+  width: 65%;
+  /* align-items: center; */
+  grid-column: 1 / 4;
+  grid-row: 5/-1;
+  padding-inline-start: var(--space-sm);
+  margin-block-start: var(--space-xxs);
+}
+
+.row1 {
+  display: grid;
+  grid-template-columns: 6.3fr 1fr;
+}
+
+.spendTitle {
+  color: var(--unify-font-light);
+  text-transform: uppercase;
+  text-shadow: var(--sh-title);
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 3.2;
+}
+
+.lineSeperator {
+  background: #0f568d;
+  margin-inline-end: var(--space-xs);
+  text-shadow: var(--sh-title);
+  grid-column: 2/-1;
+  height: 3px;
+}
+.stack {
+}
+
+.flex {
+  display: flex;
+  gap: 2em;
+}
+
+.flex > * {
+  flex: 1;
+}
+
+.bbRow2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.midAlign {
+  align-self: flex-end;
+  padding-bottom: 1em;
+}

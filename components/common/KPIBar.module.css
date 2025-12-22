@@ -1,0 +1,282 @@
+.KpiBar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  color: #ffffff;
+}
+.container {
+  color: #ffffff;
+  display: grid;
+  isolation: isolate;
+}
+
+.container > * {
+  grid-area: 1/1;
+}
+.kpiTiles {
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(var(--items-count), max-content);
+  column-gap: var(--space-lg);
+  color: #fff;
+  justify-content: space-around;
+}
+.kpiTile {
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  font-size: var(--font-lg);
+}
+.kpiTileValue small {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-lg);
+}
+.kpiTileValue {
+  padding-block-start: var(--space-xxs);
+  flex: 1;
+  height: 100%;
+  min-height: 1.8em;
+  width: min(7.5em,10em);
+  border: solid;
+  border-radius: 50px;
+}
+.kpiTileTitle {
+  display: flex;
+  gap: var(--space-xxs);
+  text-align: right;
+}
+.kpiTileTitle svg {
+  align-self: center;
+  opacity: 0.8;
+}
+.withIcon {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+}
+.withIcon svg {
+  align-self: center;
+  margin-inline-start: -15%;
+}
+.kpiItem {
+  /* padding: var(--space-sm); */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpiItemTitle {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: var(--font-lg);
+  line-height: 1.9rem;
+  font-weight: 300;
+  text-shadow: var(--sh-title);
+}
+
+.kpiItemTitle svg {
+  margin-left: var(--space-xs);
+}
+
+.wrapTitle {
+  max-width: 180px;
+}
+
+.kpiItemSticker {
+  position: relative;
+  width: 60px;
+  max-width: 60px;
+  max-height: 78px;
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpiItemSticker p {
+  color: #ffffff;
+}
+
+.kpiValue {
+  min-width: 5em;
+  text-align: center;
+  font-size: var(--font-xl);
+  font-weight: 300;
+  border: 0.1rem solid var(--kpi-color);
+  border-radius: 50px;
+}
+
+.kpiPercent {
+  padding: 0 0.5em;
+  min-width: 5em;
+  text-align: center;
+  font-size: var(--font-xl);
+  font-weight: 300;
+  border: 0.1rem solid var(--kpi-color);
+  border-radius: 50px;
+  letter-spacing: 1px;
+}
+
+.kpiPercent span {
+  font-size: var(--font-lg);
+}
+
+.kpiDays {
+  min-width: 5em;
+  text-align: center;
+  font-size: var(--font-xl);
+  font-weight: 300;
+  border: 0.1rem solid var(--kpi-color);
+  border-radius: 50px;
+  letter-spacing: 1px;
+}
+
+.kpiDays span {
+  font-size: var(--font-md);
+  padding-right: 5px;
+}
+
+/************** ACTUAL TO TARGET **************/
+.actualToTarget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actualToTarget h1,
+.actualToTarget h2 {
+  margin: 0;
+  font-weight: 300;
+}
+
+.actualToTarget h1 {
+  font-size: 1.8rem;
+}
+
+.actualToTarget h2 {
+  margin-top: -5px;
+  font-size: 1.3rem;
+}
+
+.actualToTarget .actual {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+
+.actualToTarget .actual svg {
+  margin-left: auto;
+}
+/**********************************************/
+
+/****************** FLIPPING ******************/
+/* entire container, keeps perspective */
+.flipContainer {
+  min-width: 5em;
+  text-align: center;
+  font-size: var(--font-lg);
+  font-weight: 300;
+  border: 0.1rem solid var(--kpi-color);
+  border-radius: 50px;
+}
+
+/* flip the pane when hovered */
+.flipContainer.flipped .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipContainer,
+.front,
+.back {
+  min-width: 6em;
+  width: 8em;
+  height: 1.8em;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+/* hide back of pane during swap */
+.front,
+.back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+.front.actual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: var(--space-sm);
+}
+
+.front.actual span {
+  font-size: var(--font-md);
+}
+
+.front.actual svg {
+  margin-right: var(--space-xs);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+
+.back span {
+  font-size: var(--font-md);
+}
+
+.vertical.flipContainer {
+  position: relative;
+}
+
+.vertical .back {
+  transform: rotateX(180deg);
+}
+
+.vertical.flipContainer .flipper {
+  transform-origin: 100% 0.95em; /* half of height */
+}
+
+.vertical.flipContainer.flipped .flipper {
+  transform: rotateX(-180deg);
+}
+/**********************************************/
+
+.inventory {
+  --kpi-color: var(--inv-accent2);
+}
+
+.logistics {
+  --kpi-color: var(--wh-accent2);
+}
+
+.procurement {
+  --kpi-color: var(--proc-accent1);
+}

@@ -1,0 +1,36 @@
+.wrap {
+  background: var(--static-chart-src);
+  background-position: 0 -13em;
+  background-repeat: no-repeat;
+  background-size: 115%;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  width: 117%;
+  overflow: hidden;
+  translate: -6% 0;
+}
+
+.wrap img {
+  display: block;
+  max-width: 85%;
+  justify-self: center;
+  align-self: stretch;
+  padding-block-end: .5em;
+  padding-inline: .5em;
+}
+.wrap h3 {
+  color: white;
+  place-self: center;
+  font-weight: 400;
+  line-height: 0.5;
+  /* height: 3lh; */
+  translate: -10% 350%;
+}
+
+.fixRatio {
+  border: solid;
+  border-radius: 22px;
+  aspect-ratio: 2.4;
+  object-fit: cover;
+  place-self: center;
+}

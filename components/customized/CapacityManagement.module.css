@@ -1,0 +1,41 @@
+.wrap {
+  position: relative;
+  width: max(90%, 99vw);
+  min-height: calc(100vh - 150px);
+  display: grid;
+  grid-template-columns: repeat(var(--item-count), minmax(0, 1fr));
+  grid-template-rows: minmax(0, 1.2fr) minmax(0, 1fr);
+  transition-behavior: allow-discrete;
+  justify-content: space-between;
+  transition: all 1.15s;
+  column-gap: 4em;
+  margin-block-start: 1em;
+  overflow-x: hidden;
+}
+.wrap .gauge {
+  display: grid;
+  grid-column: span var(--span);
+  grid-row: 1 / var(--span-row);
+  z-index: 8888;
+}
+
+.wrap .timeProcessingToggle {
+  margin-block-start: -1em;
+  padding: 2.2em;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-inline-start: -8em;
+  padding-inline-end: 3em;
+}
+.wrap .indexCharts {
+  padding: 1.1em;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  max-height: 23em;
+  margin-inline-start: -6em;
+}
+.wrap .endToEnd {
+  grid-row: var(--end-to-end-span);
+  scale: 0.94;
+  grid-column: span 3;
+}
