@@ -36,8 +36,31 @@ function formatNumber(number, digits = 0) {
   })
 }
 export default function SpendPredictionLineChart(props) {
+  const {
+    TechnicalName,
+    // Colors for non‑grouped charts
+    materialActualColor = '#ec8d64',
+    materialPredictedColor = '#ec8d6499',
+    materialRangeAreaColor = '#ec8d6467',
+    serviceActualColor = '#0f80b2',
+    servicePredictedColor = '#0f80b299',
+    serviceRangeAreaColor = '#0f80b267',
+    // Optional explicit override for non‑grouped colors (ignores material/service logic)
+    nonGroupedColors = null, // { actualColor, predictedColor, rangeAreaColor }
+    // Colors for grouped charts (per group)
+    groupColorList = ['#badaff', '#ec8d64', '#f2d45c'],
+    // Legend & layout
+    legendVerticalAlignment = 'bottom',
+    legendHorizontalAlignment = 'center',
+    legendProps = {},
+    // Low‑level customization hooks
+    chartProps = {},
+    argumentAxisProps = {},
+    valueAxisProps = {},
+    ...restProps
+  } = props
   const { withMask } = useContext(maskContext)
-  const { data, error, isLoading } = useBexJson(props.TechnicalName, {
+  const { data, error, isLoading } = useBexJson(TechnicalName, {
     parser: 'new',
   })
   const {
@@ -70,13 +93,13 @@ export default function SpendPredictionLineChart(props) {
   const hasGrouping = groupKey && charUniqueValues[groupKey]?.length > 0
   const groupUniqueValues = hasGrouping ? (charUniqueValues[groupKey] || []) : []
 
-  const colorList = [
-    '#badaff',
-    '#ec8d64',
-    '#f2d45c',
-  ]
+  // Fallback color palette for grouped data if consumer does not provide one
+  const colorList =
+    groupColorList && groupColorList.length
+      ? groupColorList
+      : ['#badaff', '#ec8d64', '#f2d45c']
 
-  // Handle non-grouped data (e.g., material spend, service spend)
+  // Handle non-grouped data (e.g., spend over time without grouping)
   if (!hasGrouping && argumentField && keyFigureKeys.length >= 4) {
     const formattedData = chartData
       .map((i) => {
@@ -141,18 +164,39 @@ export default function SpendPredictionLineChart(props) {
     //   }
     // }
 
-    // Check if this is service spend based on headerText
-    const actualSpendLabel = headerText[keyFigureKeys[0]] || ''
-    const predictedSpendLabel = headerText[keyFigureKeys[1]] || ''
-    const isServiceSpend = actualSpendLabel.toLowerCase().includes('service') || 
-                          predictedSpendLabel.toLowerCase().includes('service') ||
-                          props.TechnicalName?.toLowerCase().includes('srv') ||
-                          props.TechnicalName?.toLowerCase().includes('service')
-    
-    // Use different colors for service spend vs material spend
-    const actualSpendColor = isServiceSpend ? '#0f80b2' : '#ec8d64'
-    const predictedSpendColor = isServiceSpend ? '#0f80b299' : '#ec8d6499'
-    const rangeAreaColor = isServiceSpend ? '#0f80b267' : '#ec8d6467'
+    // Resolve colors for actual / predicted / range in a fully dynamic way:
+    // 1. If `nonGroupedColors` prop is provided, use that directly.
+    // 2. Otherwise, fall back to previous material/service heuristic.
+    let actualSpendColor
+    let predictedSpendColor
+    let rangeAreaColor
+
+    if (nonGroupedColors) {
+      const {
+        actualColor,
+        predictedColor,
+        rangeAreaColor: rangeColor,
+      } = nonGroupedColors
+
+      actualSpendColor = actualColor || materialActualColor
+      predictedSpendColor = predictedColor || materialPredictedColor
+      rangeAreaColor = rangeColor || materialRangeAreaColor
+    } else {
+      // Backwards‑compatible heuristic: detect "service" from labels / technical name
+      const actualSpendLabel = headerText[keyFigureKeys[0]] || ''
+      const predictedSpendLabel = headerText[keyFigureKeys[1]] || ''
+      const isServiceSpend =
+        actualSpendLabel.toLowerCase().includes('service') ||
+        predictedSpendLabel.toLowerCase().includes('service') ||
+        TechnicalName?.toLowerCase().includes('srv') ||
+        TechnicalName?.toLowerCase().includes('service')
+
+      actualSpendColor = isServiceSpend ? serviceActualColor : materialActualColor
+      predictedSpendColor = isServiceSpend
+        ? servicePredictedColor
+        : materialPredictedColor
+      rangeAreaColor = isServiceSpend ? serviceRangeAreaColor : materialRangeAreaColor
+    }
 
     return (
       <Chart
@@ -169,6 +213,7 @@ export default function SpendPredictionLineChart(props) {
             overlappingBehavior: 'none',
             font: { color: '#aab3d6', size: 10 },
           },
+          ...argumentAxisProps,
         }}
         valueAxis={{
           color: '#333d69',
@@ -180,7 +225,9 @@ export default function SpendPredictionLineChart(props) {
           grid: { visible: false },
           tick: { visible: false },
           visible: false,
+          ...valueAxisProps,
         }}
+        {...chartProps}
       >
         <CommonSeriesSettings argumentField={argumentField} />
         <ZoomAndPan dragToZoom={true} argumentAxis="both" />
@@ -215,7 +262,11 @@ export default function SpendPredictionLineChart(props) {
           <Grid visible={false} />
           <Title text="" />
         </ValueAxis>
-        <Legend verticalAlignment="bottom" horizontalAlignment="center" />
+        <Legend
+          verticalAlignment={legendVerticalAlignment}
+          horizontalAlignment={legendHorizontalAlignment}
+          {...legendProps}
+        />
       </Chart>
     )
   }
@@ -381,6 +432,7 @@ export default function SpendPredictionLineChart(props) {
             overlappingBehavior: 'none',
             font: { color: '#aab3d6', size: 10 },
           },
+          ...argumentAxisProps,
         }}
         commonSeriesSetting={{
           label: {
@@ -401,7 +453,9 @@ export default function SpendPredictionLineChart(props) {
           grid: { visible: false },
           tick: { visible: false },
           visible: false,
+          ...valueAxisProps,
         }}
+        {...chartProps}
       >
         <CommonSeriesSettings argumentField={argumentField} />
         <ZoomAndPan dragToZoom={true} argumentAxis="both" />
@@ -444,7 +498,11 @@ export default function SpendPredictionLineChart(props) {
           <Grid visible={false} />
           <Title text="" />
         </ValueAxis>
-        <Legend verticalAlignment="bottom" horizontalAlignment="center" />
+        <Legend
+          verticalAlignment={legendVerticalAlignment}
+          horizontalAlignment={legendHorizontalAlignment}
+          {...legendProps}
+        />
       </Chart>
     )
     else
