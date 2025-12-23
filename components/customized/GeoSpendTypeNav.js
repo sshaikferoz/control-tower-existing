@@ -9,7 +9,7 @@ import {
 import { maskContext } from '../../lib/maskContext'
 import Dialog from '../common/Dialog'
 import Block from '../common/Block'
-import PredictionLineChart from './PredictionLineChart'
+import SpendPredictionLineChart from './SpendPredictionLineChart'
 
 const delayGen = () => {
   let timer = 0
@@ -173,7 +173,7 @@ const SpendPredictionDialog = ({ isOpen, onClose, technicalName, title, buttonPo
         >
           <div className={styles.hideScrollbar}>
             <PopupTemplate title={title || 'AI Prediction'}>
-              <PredictionLineChart
+              <SpendPredictionLineChart
                 TechnicalName={technicalName}
                 key={`${technicalName}-${isOpen}`}
               />

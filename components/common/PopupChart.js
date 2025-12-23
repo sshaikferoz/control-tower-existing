@@ -8,7 +8,7 @@ import formatNumber, { formatToThousand } from '../../lib/helpers/formatNumber'
 import { maskContext } from '../../lib/maskContext'
 import DetailChart from './DetailChart'
 import sleep from '../../lib/helpers/sleep'
-import PredictionLineChart from '../customized/PredictionLineChart'
+import SpendPredictionLineChart from '../customized/SpendPredictionLineChart'
 // import PredictionChart from '../inventory/PredictionChart'
 const PopupTemplate = (props) => {
   return (
@@ -39,7 +39,7 @@ const ChartTypeSelector = (props) => {
     case props.ChartType === 'T':
       return <TrendChart {...props} />
     case props.ChartType === 'P':
-      return <PredictionLineChart {...props} />
+      return <SpendPredictionLineChart {...props} />
   }
   //else
   return <DetailChart {...props} />
