@@ -125,21 +125,34 @@ export default function PredictionLineChart(props) {
         return i
       })
 
-    // Find the last entry with actual spend (VALUE001) to connect prediction line
-    const lastActualIndex = formattedData.findLastIndex(
-      (i) => i[keyFigureKeys[0]] !== null && i[keyFigureKeys[0]] !== undefined
-    )
-    if (lastActualIndex >= 0 && lastActualIndex < formattedData.length - 1) {
-      const lastActual = formattedData[lastActualIndex]
-      const firstPredicted = formattedData[lastActualIndex + 1]
-      if (firstPredicted && firstPredicted[keyFigureKeys[1]] !== null) {
-        // Add a connecting point: use actual value at the transition point
-        formattedData[lastActualIndex] = {
-          ...lastActual,
-          [keyFigureKeys[1]]: lastActual[keyFigureKeys[0]],
-        }
-      }
-    }
+    // // Find the last entry with actual spend (VALUE001) to connect prediction line
+    // const lastActualIndex = formattedData.findLastIndex(
+    //   (i) => i[keyFigureKeys[0]] !== null && i[keyFigureKeys[0]] !== undefined
+    // )
+    // if (lastActualIndex >= 0 && lastActualIndex < formattedData.length - 1) {
+    //   const lastActual = formattedData[lastActualIndex]
+    //   const firstPredicted = formattedData[lastActualIndex + 1]
+    //   if (firstPredicted && firstPredicted[keyFigureKeys[1]] !== null) {
+    //     // Add a connecting point: use actual value at the transition point
+    //     formattedData[lastActualIndex] = {
+    //       ...lastActual,
+    //       [keyFigureKeys[1]]: lastActual[keyFigureKeys[0]],
+    //     }
+    //   }
+    // }
+
+    // Check if this is service spend based on headerText
+    const actualSpendLabel = headerText[keyFigureKeys[0]] || ''
+    const predictedSpendLabel = headerText[keyFigureKeys[1]] || ''
+    const isServiceSpend = actualSpendLabel.toLowerCase().includes('service') || 
+                          predictedSpendLabel.toLowerCase().includes('service') ||
+                          props.TechnicalName?.toLowerCase().includes('srv') ||
+                          props.TechnicalName?.toLowerCase().includes('service')
+    
+    // Use different colors for service spend vs material spend
+    const actualSpendColor = isServiceSpend ? '#0f80b2' : '#ec8d64'
+    const predictedSpendColor = isServiceSpend ? '#0f80b299' : '#ec8d6499'
+    const rangeAreaColor = isServiceSpend ? '#0f80b267' : '#ec8d6467'
 
     return (
       <Chart
@@ -173,7 +186,7 @@ export default function PredictionLineChart(props) {
         <ZoomAndPan dragToZoom={true} argumentAxis="both" />
         {/* Forecast Upper/Lower Range */}
         <Series
-          color="#ec8d6467"
+          color={rangeAreaColor}
           type="rangeArea"
           rangeValue1Field={keyFigureKeys[3]}
           rangeValue2Field={keyFigureKeys[2]}
@@ -186,14 +199,14 @@ export default function PredictionLineChart(props) {
           point={{ visible: false }}
           valueField={keyFigureKeys[0]}
           name={headerText[keyFigureKeys[0]] || 'Actual Spend'}
-          color="#ec8d64"
+          color={actualSpendColor}
           showZero={false}
         />
         {/* Predicted Spend */}
         <Series
           ignoreEmptyPoints={true}
           point={{ visible: false }}
-          color="#ec8d6499"
+          color={predictedSpendColor}
           valueField={keyFigureKeys[1]}
           dashStyle="dash"
           name={headerText[keyFigureKeys[1]] || 'Predicted Spend'}
@@ -237,9 +250,15 @@ export default function PredictionLineChart(props) {
     return { ...entry, ...mergedObject }
   }
   const colors = groupUniqueValues
-    .map((i, ind) => ({
-      [i]: colorList[ind] || colorList[0],
-    }))
+    .map((i, ind) => {
+      // Check if this group is service spend and assign a different color
+      const isServiceSpend = i?.toLowerCase().includes('service') || 
+                            i?.toLowerCase().includes('srv')
+      const color = isServiceSpend ? '#0f80b2' : (colorList[ind] || colorList[0])
+      return {
+        [i]: color,
+      }
+    })
     .reduce((cum, cur) => merger(cum, cur), {})
   // console.log({ colors })
   const dataForFirstGroupInitial = groupedData?.[groupUniqueValues?.[0]] || []

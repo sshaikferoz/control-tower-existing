@@ -80,20 +80,23 @@ const PopupTemplate = ({ title, children }) => {
   }, [title])
   
   return (
-    <div ref={blockRef}>
+    <div ref={blockRef} style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
       <Block
         style={{
           boxShadow: 'unset',
           background: 'var(--block-bg)',
           backgroundColor: 'rgba(21, 57, 122, 0.95)',
           padding: 'var(--space-lg)',
-          minHeight: '100%',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          overflow: 'hidden',
         }}
         popup={true}
         title={title}
         transparent={true}
       >
-        <div style={{ marginBlockEnd: '1em', display: 'grid' }}>{children}</div>
+        <div style={{ marginBlockEnd: '1em', display: 'grid', flex: 1, overflow: 'hidden' }}>{children}</div>
       </Block>
     </div>
   )
@@ -105,6 +108,17 @@ const SpendPredictionDialog = ({ isOpen, onClose, technicalName, title, buttonPo
   const contentRef = useRef(null)
   const [dialogContentVisible, setDialogContentVisible] = useState(false)
   const [shouldShowDialog, setShouldShowDialog] = useState(false)
+
+  useEffect(() => {
+    if (isOpen && dialogRef.current) {
+      // Set fixed dimensions and hide scrollbar
+      const dialog = dialogRef.current
+      dialog.style.width = '42em'
+      dialog.style.height = '32em'
+      dialog.style.aspectRatio = 'unset'
+      dialog.style.overflow = 'hidden'
+    }
+  }, [isOpen])
 
   useEffect(() => {
     if (isOpen) {
@@ -147,13 +161,24 @@ const SpendPredictionDialog = ({ isOpen, onClose, technicalName, title, buttonPo
       }}
     >
       {dialogContentVisible && technicalName && (
-        <div ref={contentRef}>
-          <PopupTemplate title={title || 'AI Prediction'}>
-            <PredictionLineChart
-              TechnicalName={technicalName}
-              key={`${technicalName}-${isOpen}`}
-            />
-          </PopupTemplate>
+        <div 
+          ref={contentRef}
+          style={{
+            width: '42em',
+            height: '32em',
+            overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          <div className={styles.hideScrollbar}>
+            <PopupTemplate title={title || 'AI Prediction'}>
+              <PredictionLineChart
+                TechnicalName={technicalName}
+                key={`${technicalName}-${isOpen}`}
+              />
+            </PopupTemplate>
+          </div>
         </div>
       )}
     </Dialog>
