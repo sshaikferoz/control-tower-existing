@@ -1,5 +1,5 @@
 .container {
-  left:26rem;
+  left: 0;
   display: grid;
   position: relative;
   padding-block-start: 1em;
@@ -8,7 +8,10 @@
 }
 .wrap {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  /* Keep two columns but center their content and prevent awkward stretching */
+  grid-template-columns: auto auto;
+  justify-content: center;
+  column-gap: 2rem;
   position: relative;
   margin-block-start: -0.8em;
   height: min(calc(40vh), 340px);
@@ -416,4 +419,29 @@
   height: 2lh;
   display: grid;
   place-items: center;
+}
+
+.gaugeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding-left: 0; /* keep content centered horizontally */
+  /* Keep gauge section width in sync with Circular Economy column (300px) */
+  width: 300px;
+}
+
+.gaugeBottomLabels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px; /* match gauge width */
+  margin-top: 4px; /* small gap under gauge */
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.gaugeBottomLabel {
+  text-align: center;
 }

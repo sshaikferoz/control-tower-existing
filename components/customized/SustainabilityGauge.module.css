@@ -1,0 +1,88 @@
+.container {
+  position: relative;
+  /* Match width with Circular Economy first column (300px) */
+  width: 300px;
+  height: 260px;
+  margin: 0 auto;
+  color: #ffffff;
+  overflow: visible;
+}
+
+/* Gauges */
+.outerGaugeWrapper {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+}
+
+.outerGauge,
+.innerGauge {
+  position: absolute;
+  inset: 0;
+  
+}
+
+.outerGauge {
+  z-index: 1;
+}
+
+.innerGauge {
+  z-index: 2;
+  transform: scale(0.8);
+  
+}
+.centerBubble {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  width: 62%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #00a3e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  z-index: 3;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--bubble-rotation));
+}
+
+/* Keep text horizontal */
+.centerContent {
+  transform: rotate(calc(-1 * var(--bubble-rotation)));
+}
+
+
+.centerScore {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.centerSubtitle {
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+.industryValue {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+/* Industry average tooltip positioned at pointer */
+.industryTooltip {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.industryTooltipContent {
+  font-size: 0.8rem;
+  white-space: nowrap;
+  color: #ffffff;
+}
