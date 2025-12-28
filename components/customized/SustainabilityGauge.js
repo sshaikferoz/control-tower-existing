@@ -68,12 +68,23 @@ const SustainabilityGauge = ({ score = 100, industryAvg = 61 }) => {
                         radius={0.95}
                     />
 
-                    <Scale startValue={0} endValue={100} tick={{ visible: false }}>
+                    <Scale
+                        startValue={0}
+                        endValue={100}
+                        scaleDivisionFactor={20}
+                        tick={{
+                            visible: true,
+                            length: 18,
+                            width: 0.8,
+                            color: '#30499f'
+                        }}
+                    >
                         <Label visible={false} useRangeColors={true} customizeText={customizeText} />
                     </Scale>
 
                     <RangeContainer width={20}>
                         <Range startValue={0} endValue={industryAvg} color="#00a3e0" />
+                        <Range startValue={industryAvg} endValue={100} color="#335caa" />
                     </RangeContainer>
 
                     <ValueIndicator
@@ -151,8 +162,14 @@ const SustainabilityGauge = ({ score = 100, industryAvg = 61 }) => {
                 }}
             >
                 <div className={styles.industryTooltipContent}>
-                    Industry Avg. {industryAvg}
+                    Industry Avg. score <span className={styles.industryValue}>{industryAvg}</span>
                 </div>
+            </div>
+
+            {/* ===== BOTTOM LABELS ===== */}
+            <div className={styles.bottomLabels}>
+                <div className={styles.bottomLabel}>0</div>
+                <div className={styles.bottomLabel}>100</div>
             </div>
         </div>
     );

@@ -14,7 +14,8 @@
   column-gap: 2rem;
   position: relative;
   margin-block-start: -0.8em;
-  height: min(calc(40vh), 340px);
+  height: 100%;
+  max-height: 100%;
 }
 
 .circularTableWrap {
@@ -24,7 +25,9 @@
   grid-template-columns: 300px minmax(0, 1.5fr);
   position: relative;
   align-content: center;
-  /* overflow: hidden; */
+  left: 8em;
+  max-height: 100%;
+  overflow: hidden;
 }
 .circulNav {
   align-self: center;
@@ -44,9 +47,11 @@
   /* opacity: 0.8; */
   position: relative;
   grid-column: 2/-1;
-  min-height: 300px;
+  min-height: 290px;
+  max-height: 100%;
   translate: 0 10px;
   width: 30em;
+  overflow: hidden;
 }
 
 .circularTableWrap:has(.circulNav__body[data-rotate-step='one']) {
@@ -422,6 +427,7 @@
 }
 
 .gaugeSection {
+  top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -429,7 +435,29 @@
   color: #ffffff;
   padding-left: 0; /* keep content centered horizontally */
   /* Keep gauge section width in sync with Circular Economy column (300px) */
-  width: 300px;
+  width: 350px;
+  position: relative;
+  max-height: 100%;
+  overflow: hidden;
+  scale: 0.9;
+  min-height: 344px;
+}
+
+.gaugeTitle {
+  height: 1.7lh;
+  translate: 0 18px;
+  padding-inline-start: 0.4em;
+  color: var(--unify-font-light, #ffffff);
+  font-weight: 400;
+  font-size: 1.5em;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+  position: absolute;
+  top: -28px;
+  left: 7em;
+  z-index: 10;
+  overflow: visible;
 }
 
 .gaugeBottomLabels {

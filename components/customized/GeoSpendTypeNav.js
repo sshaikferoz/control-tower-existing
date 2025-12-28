@@ -108,12 +108,13 @@ const SpendPredictionDialog = ({ isOpen, onClose, technicalName, title, buttonPo
   const contentRef = useRef(null)
   const [dialogContentVisible, setDialogContentVisible] = useState(false)
   const [shouldShowDialog, setShouldShowDialog] = useState(false)
+  const timeoutRef = useRef(null)
 
   useEffect(() => {
     if (isOpen && dialogRef.current) {
       // Set fixed dimensions and hide scrollbar
       const dialog = dialogRef.current
-      dialog.style.width = '42em'
+      dialog.style.width = '63em'
       dialog.style.height = '32em'
       dialog.style.aspectRatio = 'unset'
       dialog.style.overflow = 'hidden'
@@ -121,39 +122,67 @@ const SpendPredictionDialog = ({ isOpen, onClose, technicalName, title, buttonPo
   }, [isOpen])
 
   useEffect(() => {
+    // Clear any pending timeouts when isOpen changes
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+      timeoutRef.current = null
+    }
+
     if (isOpen) {
-      // First set content visibility
+      // Ensure content is visible first
       setDialogContentVisible(true)
+      
       // Wait for content to be rendered in DOM before showing dialog
-      requestAnimationFrame(() => {
+      // Use a small delay to ensure DOM is ready, especially when reopening immediately
+      timeoutRef.current = setTimeout(() => {
         requestAnimationFrame(() => {
-          // Check if content is actually in the DOM
-          if (contentRef.current || dialogRef.current?.querySelector('.popupTitle')) {
-            setShouldShowDialog(true)
-          } else {
-            // Fallback: show after brief delay if content check fails
-            setTimeout(() => setShouldShowDialog(true), 100)
-          }
+          requestAnimationFrame(() => {
+            // Check if content is actually in the DOM
+            if (contentRef.current || dialogRef.current?.querySelector('.popupTitle')) {
+              setShouldShowDialog(true)
+            } else {
+              // Fallback: show after brief delay if content check fails
+              timeoutRef.current = setTimeout(() => {
+                setShouldShowDialog(true)
+                timeoutRef.current = null
+              }, 100)
+            }
+          })
         })
-      })
+        timeoutRef.current = null
+      }, 50) // Small delay to ensure previous close animation completes
     } else {
       // Hide dialog first, then content
       setShouldShowDialog(false)
-      setTimeout(() => {
+      timeoutRef.current = setTimeout(() => {
         setDialogContentVisible(false)
+        timeoutRef.current = null
       }, 200)
+    }
+
+    // Cleanup function to clear timeout on unmount or when isOpen changes
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+        timeoutRef.current = null
+      }
     }
   }, [isOpen])
 
   return (
     <Dialog
       ref={dialogRef}
-      size="42em"
+      size="63em"
       radius="14px"
       modalState={shouldShowDialog ? 'show' : 'close'}
       clientX={buttonPosition?.x}
       clientY={buttonPosition?.y}
       onModalClose={async () => {
+        // Clear any pending timeouts
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current)
+          timeoutRef.current = null
+        }
         setShouldShowDialog(false)
         setDialogContentVisible(false)
         await new Promise((r) => setTimeout(r, 400))
@@ -164,7 +193,7 @@ const SpendPredictionDialog = ({ isOpen, onClose, technicalName, title, buttonPo
         <div 
           ref={contentRef}
           style={{
-            width: '42em',
+            width: '63em',
             height: '32em',
             overflow: 'hidden',
             display: 'flex',

@@ -2,7 +2,7 @@
   grid-template-columns: 2.1fr 1fr;
   grid-template-rows: 56vh 1fr;
   row-gap: 1em;
-}
+ }
 
 .map {
   /* scale: .9; */
@@ -21,4 +21,6 @@
 .sustainability {
   display: grid;
   grid-template-rows: minmax(0, 1.5em) 1fr;
+  overflow: hidden;
+  max-height: 100%;
 }

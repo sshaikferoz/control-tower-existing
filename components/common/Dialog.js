@@ -47,6 +47,12 @@ const Dialog = React.forwardRef((props, ref) => {
     else centerCssClas = styles.defaultCenter
   }
   useEffect(() => {
+    // Reset isOpen state when modalState changes to 'close' to allow immediate reopening
+    if (props?.modalState === 'close' && isOpen) {
+      setIsOpen(false)
+      return
+    }
+    
     if (props?.modalState === 'show' && !isOpen) {
       if (defaultPosition && dialog) {
         // Set initial positioning before showing dialog

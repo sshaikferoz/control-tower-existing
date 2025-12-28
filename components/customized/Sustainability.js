@@ -131,6 +131,7 @@ function Sustainability(props) {
     return (
         <div className={styles.container}>
             <div className={styles.wrap}>
+                <h2 className={styles.gaugeTitle}>Sustainability-Certified Suppliers</h2>
                 {/* <div className={styles.co2}>
           <h3>CO2 Emission Targets</h3>
           <div className={styles.co2__body}>
